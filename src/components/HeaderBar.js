@@ -7,10 +7,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function HeaderBar() {
     return (
+        
         <Navbar bg="light" expand="lg">
           <Container fluid>
             <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
+            <Button variant="success">Login</Button>
             <Navbar.Toggle aria-controls="navbarScroll" />
+            
             <Navbar.Collapse id="navbarScroll">
               <Nav
                 className="me-auto my-2 my-lg-0"
