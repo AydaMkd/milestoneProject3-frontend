@@ -1,5 +1,5 @@
 # milestoneProject3-frontend
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)Â¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
 (add link) 
@@ -48,7 +48,7 @@ Hangry Nomster
     - React
   ### Back End  
     - Node
-    - Postgres
+    - MongoDb
     - Sequelize
     - PassportJS
 
@@ -56,7 +56,7 @@ Hangry Nomster
  (copy link )
 
 ## Usage
-User should be able to submit their own photos of recipes
+User should be able to submit their own recipes, keep their favorite receipts, rate and comment in other user's recipes. 
 
 ## Sources
 (copy link of our souces)
