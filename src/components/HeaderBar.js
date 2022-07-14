@@ -11,6 +11,7 @@ function HeaderBar() {
         <Navbar bg="light" expand="lg">
           <Container fluid>
             <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
+            <Button variant="success">Sign Up</Button>
             <Button variant="success">Login</Button>
             <Navbar.Toggle aria-controls="navbarScroll" />
             
