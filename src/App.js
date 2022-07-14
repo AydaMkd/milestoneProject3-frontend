@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import About from './components/About';
 import HeaderBar from './components/HeaderBar';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 import SignUpForm from './users/SignUpForm';
@@ -11,7 +12,7 @@ function App() {
       <Router>
         <header>
           <HeaderBar />
-
+          <About />
             
         </header>
       </Router>
