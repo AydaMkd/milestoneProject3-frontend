@@ -12,8 +12,7 @@ function App() {
       <Router>
         <header>
           <HeaderBar />
-          <About />
-            
+          
         </header>
       </Router>
     </div>
