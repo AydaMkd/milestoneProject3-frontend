@@ -18,7 +18,7 @@ const About = () => {
                         We hope you enjoy it! 
                     </Card.Text>
                 </Card.Body>
-                <Card.Img style={{ width: '50%', margin: '0 auto'}}  variant="bottom" src="foodBackground.jpg" />
+                {/* <Card.Img style={{ width: '50%', margin: '0 auto'}}  variant="bottom" src="foodBackground.jpg" /> */}
             </Card>
         </Container>
     );
