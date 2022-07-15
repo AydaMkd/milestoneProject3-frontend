@@ -4,41 +4,47 @@ import { CurrentUser } from "../contexts/CurrentUser"
 
 function LoginForm() {
 
-    const history = useNavigate()
-
+    const navigate = useNavigate()
+    
+    
     const { setCurrentUser } = useContext(CurrentUser)
-
+    console.log(setCurrentUser)
+   
     const [credentials, setCredentials] = useState({
         email: '',
         password: ''
     })
 
     const [errorMessage, setErrorMessage] = useState(null)
-
+    
+    
+    
   
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch(`http://localhost:5000/authentication/`, {
+        const response = await fetch(`http://localhost:5000/api/auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(credentials)
         })
-    
+        
         const data = await response.json()
+        console.log(data)
     
         if (response.status === 200) {
             setCurrentUser(data.user)
             localStorage.setItem('token', data.token)
-            history.push('/')
+            navigate('/')
         } else {
             setErrorMessage(data.message)
         }
     }
-      
+    if(localStorage.getItem('token')){
+        navigate('/')
+       }
     
-
     return (
         <main>
             <h1>Login</h1>
@@ -50,6 +56,7 @@ function LoginForm() {
                 )
                 : null
             }
+            
             <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-sm-6 form-group">
