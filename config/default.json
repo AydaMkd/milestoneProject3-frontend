@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://recipe:password31@cluster0.fsup4jb.mongodb.net/recipe?retryWrites=true&w=majority",
+    "jwtSecret" : "kittycat"
+}

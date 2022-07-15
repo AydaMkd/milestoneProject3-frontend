@@ -31,13 +31,14 @@ function HeaderBar() {
                   aria-label="Search"
                 />
                 <NavDropdown title="Search by" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
+                  <NavDropdown.Item href="#action3">
                     Cuisine
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action4">
+                    Rating
+                  </NavDropdown.Item>
                   <NavDropdown.Item href="#action5">
-                    Entree
+                    Difficulty
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Button variant="outline-success">Search</Button>

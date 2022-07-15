@@ -1,20 +1,19 @@
 import { useState, useEffect } from "react"
-import { useHistory, useParams } from "react"
-
-
+import { useNavigate, useParams } from "react-router"
 function SignUpForm() {
 
-	const history = useHistory()
+	const navigate = useNavigate();
 
 	const [user, setUser] = useState({
 		username: '',
+		email: '',
 		password: ''
 	})
 
 	async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`http://localhost:5000/users/`, {
+		await fetch(`http://localhost:5000/api/users/`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -22,7 +21,7 @@ function SignUpForm() {
 			body: JSON.stringify(user)
 		})
 
-		history.push(`/`)
+		navigate(`/`)
 	}
 
 	return (
@@ -31,30 +30,43 @@ function SignUpForm() {
 			<form onSubmit={handleSubmit}>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="username">User Name</label>
+						<label htmlFor="username">Username</label>
 						<input
 							required
-							value={user.firstName}
+							value={user.username}
 							onChange={e => setUser({ ...user, username: e.target.value })}
 							className="form-control"
 							id="username"
 							name="username"
 						/>
 					</div>
+					
 				</div>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-				        <label htmlFor="password">Password</label>
-				        <input
-				            type="password"
-				            required
-				            value={user.password}
-				            onChange={e => setUser({ ...user, password: e.target.value })}
-				            className="form-control"
-				            id="password"
-				            name="password"
-				        />
-				    </div>
+						<label htmlFor="email">Email</label>
+						<input
+							type="email"
+							required
+							value={user.email}
+							onChange={e => setUser({ ...user, email: e.target.value })}
+							className="form-control"
+							id="email"
+							name="email"
+						/>
+					</div>
+					<div className="col-sm-6 form-group">
+						<label htmlFor="password">Password</label>
+						<input
+							type="password"
+							required
+							value={user.password}
+							onChange={e => setUser({ ...user, password: e.target.value })}
+							className="form-control"
+							id="password"
+							name="password"
+						/>
+					</div>
 				</div>
 				<input className="btn btn-primary" type="submit" value="Sign Up" />
 			</form>
