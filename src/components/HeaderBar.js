@@ -10,19 +10,19 @@ import { CurrentUser } from '../contexts/CurrentUser';
 
 
 function HeaderBar() {
-  const history = useNavigate()
+  const navigate = useNavigate()
 
     const { currentUser } = useContext(CurrentUser)
 
   let loginActions = (
     <>
       <li>
-        <a href="#" onClick={() => history.push("/sign-up")}>
+        <a href="#" onClick={() => navigate("/sign-up")}>
           Sign Up
         </a>
       </li>
       <li>
-        <a href="#" onClick={() => history.push("/login")}>
+        <a href="#" onClick={() => navigate("/login")}>
           Login
         </a>
       </li>
@@ -45,10 +45,6 @@ function HeaderBar() {
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
 
         <div className="authbuttons">
-
-          <Button variant="success">Sign Up</Button>
-
-          <Button variant="success">Login</Button>
 
           <Navbar.Toggle aria-controls="navbarScroll" />
           {loginActions}

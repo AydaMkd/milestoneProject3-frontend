@@ -8,7 +8,6 @@ import LoginForm from './users/LoginForm'
 import SignUpForm from './users/SignUpForm';
 import CurrentUserProvider from './contexts/CurrentUser';
 import { BrowserRouter } from 'react-router-dom';
-import Navigation from './components/Navigation';
 
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
 
     <CurrentUserProvider>
       <BrowserRouter>
-        <Navigation />
+        <HeaderBar />
         <SiteCards />
         <Routes>
           <Route path="/sign-up" element={<SignUpForm />} />
