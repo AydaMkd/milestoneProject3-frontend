@@ -1,15 +1,15 @@
 import { useContext, useState } from "react"
-import { useHistory } from 'react'
+import { useNavigate } from "react-router"
 import { CurrentUser } from "../contexts/CurrentUser"
 
 function LoginForm() {
 
-    const history = useHistory()
+    const history = useNavigate()
 
     const { setCurrentUser } = useContext(CurrentUser)
 
     const [credentials, setCredentials] = useState({
-        username: '',
+        email: '',
         password: ''
     })
 
@@ -53,15 +53,15 @@ function LoginForm() {
             <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-sm-6 form-group">
-                        <label htmlFor="username">User Name</label>
+                        <label htmlFor="email">Email</label>
                         <input
-                            type="text"
+                            type="email"
                             required
-                            value={credentials.username}
-                            onChange={e => setCredentials({ ...credentials, username: e.target.value })}
+                            value={credentials.email}
+                            onChange={e => setCredentials({ ...credentials, email: e.target.value })}
                             className="form-control"
-                            id="username"
-                            name="username"
+                            id="email"
+                            name="email"
                         />
                     </div>
                     <div className="col-sm-6 form-group">
