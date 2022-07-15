@@ -13,7 +13,7 @@ function SiteCards() {
                 <Card.Header>
                     <Nav variant="tabs" defaultActiveKey="#first">
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/home/about">About</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link as={Link} to="/recipes">Recipes</Nav.Link>
@@ -29,7 +29,7 @@ function SiteCards() {
             </Card>
         </><div className="Display">
                 <Routes>
-                    <Route path="/about" element={<About />} />
+                    <Route path="/home/about" element={<About />} />
                     <Route path="/recipes" element={<Recipes />} />
                     <Route path="/myRecipes" element={<MyRecipes />} />
                     <Route path="/profile" element={<Profile />} />
