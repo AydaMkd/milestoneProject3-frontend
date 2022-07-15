@@ -16,7 +16,9 @@ function App() {
 
     <CurrentUserProvider>
       <BrowserRouter>
+
         <Navigation />
+
         <SiteCards />
         <Routes>
           <Route path="/sign-up" element={<SignUpForm />} />
