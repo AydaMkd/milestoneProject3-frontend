@@ -44,11 +44,11 @@ function HeaderBar() {
       <Container fluid>
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
 
-        <div className="authbuttons">
-
-          <Navbar.Toggle aria-controls="navbarScroll" />
+        
           {loginActions}
-        </div>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          
+       
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
