@@ -10,12 +10,13 @@ import Navigation from './navigation';
 import { BrowserRouter } from 'react-router-dom';
 
 
+
 function App() {
   return (
 
     <CurrentUserProvider>
     <BrowserRouter>
-     
+    <Navigation />
       <Routes>
       <Route path="/" element={<HeaderBar/>} />
         <Route path="/sign-up" element={<SignUpForm/>} />
