@@ -10,9 +10,9 @@ import { CurrentUser } from '../contexts/CurrentUser'
 
 function SiteCards() {
 
-    const { currentUser } = useContext(CurrentUser)
+    // const { currentUser } = useContext(CurrentUser)
 
-    if (currentUser) {
+    // if (currentUser) {
         return (
             <><>
                 <Card>
@@ -42,29 +42,29 @@ function SiteCards() {
                     </Routes>
                 </div></>
         );
-    } else {
-        return (
-            <><>
-                <Card>
-                    <Card.Header>
-                        <Nav variant="tabs" defaultActiveKey="#first">
-                            <Nav.Item>
-                                <Nav.Link as={Link} to="/about">About</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link as={Link} to="/recipes">Recipes</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                    </Card.Header>
-                </Card>
-                </><div className="Display">
-                        <Routes>
-                            <Route path="/about" element={<About />} />
-                            <Route path="/recipes" element={<Recipes />} />
-                        </Routes>
-                </div></>
-        );
-    }    
+    // } else {
+    //     return (
+    //         <><>
+    //             <Card>
+    //                 <Card.Header>
+    //                     <Nav variant="tabs" defaultActiveKey="#first">
+    //                         <Nav.Item>
+    //                             <Nav.Link as={Link} to="/about">About</Nav.Link>
+    //                         </Nav.Item>
+    //                         <Nav.Item>
+    //                             <Nav.Link as={Link} to="/recipes">Recipes</Nav.Link>
+    //                         </Nav.Item>
+    //                     </Nav>
+    //                 </Card.Header>
+    //             </Card>
+    //             </><div className="Display">
+    //                     <Routes>
+    //                         <Route path="/about" element={<About />} />
+    //                         <Route path="/recipes" element={<Recipes />} />
+    //                     </Routes>
+    //             </div></>
+    //     );
+    // }    
 }
 
 
