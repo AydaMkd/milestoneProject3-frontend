@@ -12,8 +12,8 @@ function SiteCards() {
 
     const { currentUser } = useContext(CurrentUser)
 
-    if (currentUser) {
-        return (
+   
+    let homepage=(
             <><>
                 <Card>
                     <Card.Header>
@@ -42,8 +42,8 @@ function SiteCards() {
                     </Routes>
                 </div></>
         );
-    } else {
-        return (
+    
+       if (!currentUser){ homepage=(
             <><>
                 <Card>
                     <Card.Header>
@@ -64,7 +64,12 @@ function SiteCards() {
                     </Routes>
                 </div></>
         );
-    }
+    }  
+    return   (
+        <div>
+            {homepage}
+        </div>
+    )
 }
 
 

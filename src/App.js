@@ -10,15 +10,15 @@ import CurrentUserProvider from './contexts/CurrentUser';
 import { BrowserRouter } from 'react-router-dom';
 import NewRecipe from './components/NewRecipe';
 
+
 function App() {
   return (
 
     <CurrentUserProvider>
       <BrowserRouter>
-        <HeaderBar />
-        
+        <HeaderBar /> 
+         {/* <SiteCards /> */}
         <Routes>
-          <Route path="/" element={<SiteCards />} />
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/newrecipe" element={<NewRecipe />} />

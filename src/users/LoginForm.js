@@ -6,7 +6,10 @@ function LoginForm() {
 
     const navigate = useNavigate()
     
-    
+    // if(localStorage.getItem('token')){
+    //     navigate('/')
+    //    }
+ 
     const { setCurrentUser } = useContext(CurrentUser)
     console.log(setCurrentUser)
    
@@ -18,8 +21,7 @@ function LoginForm() {
     const [errorMessage, setErrorMessage] = useState(null)
     
     
-    
-  
+   
     async function handleSubmit(e) {
         e.preventDefault()
         const response = await fetch(`http://localhost:5000/api/auth`, {
@@ -35,16 +37,14 @@ function LoginForm() {
     
         if (response.status === 200) {
             setCurrentUser(data.user)
+            console.log(data.user)
             localStorage.setItem('token', data.token)
             navigate('/')
         } else {
             setErrorMessage(data.message)
         }
     }
-    if(localStorage.getItem('token')){
-        navigate('/')
-       }
-    
+   
     return (
         <main>
             <h1>Login</h1>
