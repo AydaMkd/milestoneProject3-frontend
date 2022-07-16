@@ -1,19 +1,24 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useState, useEffect, useContext } from 'react'
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router";
-import { CurrentUser } from '../contexts/CurrentUser';
-
+import { CurrentUser } from "../contexts/CurrentUser";
 
 function HeaderBar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    const { currentUser } = useContext(CurrentUser)
+  const { currentUser, setCurrentUser } = useContext(CurrentUser);
 
+  function logout(e) {
+    localStorage.removeItem("token");
+    setCurrentUser(null)
+    navigate("/");
+  }
+  // this collection of html should be inside of an unordered/ordered list
   let loginActions = (
     <>
       <li>
@@ -27,36 +32,32 @@ function HeaderBar() {
         </a>
       </li>
     </>
-  )
-    if (currentUser) {
+  );
+
+  if (currentUser) {
     loginActions = (
-      <li>
-        Logged in as {currentUser.username}
-      </li>
-    )
+      <ul>
+        <li>Logged in as {currentUser.username}</li>
+        <button onClick={logout}>Logout</button>
+      </ul>
+    );
   }
-  
+  // console.log(currentUser)
+
   return (
-
-
-
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
 
-        <div className="authbuttons">
+        {loginActions}
+        <Navbar.Toggle aria-controls="navbarScroll" />
 
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          {loginActions}
-        </div>
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: "100px" }}
             navbarScroll
-          >
-
-          </Nav>
+          ></Nav>
           <Form className="d-flex">
             <Form.Control
               type="search"
@@ -65,15 +66,9 @@ function HeaderBar() {
               aria-label="Search"
             />
             <NavDropdown title="Search by" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">
-                Cuisine
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Rating
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Difficulty
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Cuisine</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Rating</NavDropdown.Item>
+              <NavDropdown.Item href="#action5">Difficulty</NavDropdown.Item>
             </NavDropdown>
             <Button variant="outline-success">Search</Button>
           </Form>

@@ -6,9 +6,12 @@ function LoginForm() {
 
     const navigate = useNavigate()
     
-    
+    // if(localStorage.getItem('token')){
+    //     navigate('/')
+    //    }
+ 
     const { setCurrentUser } = useContext(CurrentUser)
-    console.log(setCurrentUser)
+    // console.log(setCurrentUser)
    
     const [credentials, setCredentials] = useState({
         email: '',
@@ -18,8 +21,7 @@ function LoginForm() {
     const [errorMessage, setErrorMessage] = useState(null)
     
     
-    
-  
+   
     async function handleSubmit(e) {
         e.preventDefault()
         const response = await fetch(`http://localhost:5000/api/auth`, {
@@ -32,7 +34,7 @@ function LoginForm() {
         
         const data = await response.json()
         console.log(data)
-    
+       
         if (response.status === 200) {
             setCurrentUser(data.user)
             localStorage.setItem('token', data.token)
@@ -41,10 +43,7 @@ function LoginForm() {
             setErrorMessage(data.message)
         }
     }
-    // if(localStorage.getItem('token')){
-    //     navigate('/')
-    //    }
-    
+   
     return (
         <main>
             <h1>Login</h1>
