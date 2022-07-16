@@ -37,6 +37,7 @@ function LoginForm() {
     
         if (response.status === 200) {
             setCurrentUser(data.user)
+            console.log(data.user)
             localStorage.setItem('token', data.token)
             navigate('/')
         } else {
