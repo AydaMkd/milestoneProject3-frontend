@@ -14,8 +14,8 @@ function HeaderBar() {
 
     const { currentUser } = useContext(CurrentUser)
 
-    async function logout(e) {
-      e.preventDefault()
+    function logout(e) {
+
       localStorage.removeItem('token')
       navigate('/')
   }
@@ -35,13 +35,16 @@ function HeaderBar() {
   
     if (currentUser) {
     loginActions = (
-      <ul>
+      <>
       <li>
         Logged in as {currentUser.username}
       </li>
+      
+      <li>
       <button onClick={logout}>Logout</button>
+      </li>
 
-      </ul>
+      </>
     )
   }
   

@@ -17,7 +17,7 @@ function App() {
     <CurrentUserProvider>
       <BrowserRouter>
         <HeaderBar /> 
-         {/* <SiteCards /> */}
+        <SiteCards />
         <Routes>
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
