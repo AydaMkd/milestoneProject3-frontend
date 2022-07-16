@@ -57,11 +57,11 @@ function SiteCards() {
                         </Nav>
                     </Card.Header>
                 </Card>
-                </><div className="Display">
-                        <Routes>
-                            <Route path="/about" element={<About />} />
-                            <Route path="/recipes" element={<Recipes />} />
-                        </Routes>
+            </><div className="Display">
+                    <Routes>
+                        <Route path="/about" element={<About />} />
+                        <Route path="/recipes" element={<Recipes />} />
+                    </Routes>
                 </div></>
         );
     }  
@@ -70,8 +70,8 @@ function SiteCards() {
             {homepage}
         </div>
     )
-
 }
 
 
-                    export default SiteCards;
+export default SiteCards;
+
