@@ -41,9 +41,9 @@ function LoginForm() {
             setErrorMessage(data.message)
         }
     }
-    if(localStorage.getItem('token')){
-        navigate('/')
-       }
+    // if(localStorage.getItem('token')){
+    //     navigate('/')
+    //    }
     
     return (
         <main>
