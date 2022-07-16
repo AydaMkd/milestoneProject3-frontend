@@ -8,6 +8,7 @@ import LoginForm from './users/LoginForm'
 import SignUpForm from './users/SignUpForm';
 import CurrentUserProvider from './contexts/CurrentUser';
 import { BrowserRouter } from 'react-router-dom';
+import NewRecipe from './components/NewRecipe';
 
 
 function App() {
@@ -15,11 +16,12 @@ function App() {
 
     <CurrentUserProvider>
       <BrowserRouter>
-        <HeaderBar />
-        {/* <SiteCards /> */}
+        <HeaderBar /> 
+         <SiteCards />
         <Routes>
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
+          {/* <Route path="/newrecipe" element={<NewRecipe />} /> */}
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>

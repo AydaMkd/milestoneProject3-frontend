@@ -14,7 +14,12 @@ function HeaderBar() {
 
     const { currentUser } = useContext(CurrentUser)
 
-  let loginActions = (
+    async function logout(e) {
+      e.preventDefault()
+      localStorage.removeItem('token')
+      navigate('/')
+  }
+  let loginActions = 
     <>
       <li>
         <a href="#" onClick={() => navigate("/sign-up")}>
@@ -27,28 +32,30 @@ function HeaderBar() {
         </a>
       </li>
     </>
-  )
+  
     if (currentUser) {
     loginActions = (
+      <ul>
       <li>
         Logged in as {currentUser.username}
       </li>
+      <button onClick={logout}>Logout</button>
+
+      </ul>
     )
   }
   
   return (
 
-
-
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
 
-        <div className="authbuttons">
-
-          <Navbar.Toggle aria-controls="navbarScroll" />
+        
           {loginActions}
-        </div>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          
+       
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
