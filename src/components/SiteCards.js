@@ -13,7 +13,7 @@ function SiteCards() {
                 <Card.Header>
                     <Nav variant="tabs" defaultActiveKey="#first">
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/home/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link as={Link} to="/recipes">Recipes</Nav.Link>
