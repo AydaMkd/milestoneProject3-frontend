@@ -5,7 +5,6 @@ import About from './About';
 import Recipes from './Recipes';
 import MyRecipes from './MyRecipes';
 import NewRecipe from './NewRecipe';
-import Profile from './Profile';
 import { useContext } from "react";
 import { CurrentUser } from '../contexts/CurrentUser'
 
