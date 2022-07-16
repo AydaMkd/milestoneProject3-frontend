@@ -7,20 +7,18 @@ function CurrentUserProvider({ children }) {
 
     const [currentUser, setCurrentUser] = useState(null)
 
-    useEffect(() => {
-        const getLoggedInUser = async () => {
-            let response = await fetch('http://localhost:5000/api/auth', {
-                headers: {
-                    'x-auth-token': localStorage.getItem('token')
-                }
-            })
-            let user = await response.json()
-            setCurrentUser(user)
-            console.log(user);
-        }
-        getLoggedInUser()
-    }, [])
-
+    // useEffect(() => {
+    //     const getLoggedInUser = async () => {
+    //         let response = await fetch('http://localhost:5000/auth', {
+    //             headers: {
+    //                 'Authorization': localStorage.getItem('token')
+    //             }
+    //         })
+    //         let user = await response.json()
+    //         setCurrentUser(user)
+    //     }
+    //     getLoggedInUser()
+    // }, [])
     return (
         <CurrentUser.Provider value={{ currentUser, setCurrentUser }}>
             {children}
