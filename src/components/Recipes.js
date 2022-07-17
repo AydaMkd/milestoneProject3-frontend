@@ -20,13 +20,11 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router"
-
+import Search from "./Search";
 
 function Recipes() {
 
 	// const {  } = useParams()
-
-	const navigate = useNavigate()
 
 	const [recipes, setRecipes] = useState(null)
 
@@ -54,8 +52,12 @@ function Recipes() {
 
 	return (
 		<main>
+		
+			<Search />
+		
         <div className="row">
 				<div className="col-sm-6">
+					<h2>{recipes[0].recipename}</h2>
 					<img style={{ maxWidth: 200 }} src={recipes[0].image} alt={recipes[0].recipename} />
                     <h3>{recipes[0].cuisines}</h3><br/>
                     <h3>{recipes[0].description}</h3>

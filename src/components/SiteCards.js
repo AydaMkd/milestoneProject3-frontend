@@ -1,10 +1,6 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
-import About from './About';
-import Recipes from './Recipes';
-import MyRecipes from './MyRecipes';
-import NewRecipe from './NewRecipe';
 import { useContext } from "react";
 import { CurrentUser } from '../contexts/CurrentUser'
 
@@ -14,7 +10,7 @@ function SiteCards() {
 
    
     let homepage=(
-            <><>
+            
                 <Card>
                     <Card.Header>
                         <Nav variant="tabs" defaultActiveKey="#first">
@@ -33,18 +29,11 @@ function SiteCards() {
                         </Nav>
                     </Card.Header>
                 </Card>
-            </><div className="Display">
-                    <Routes>
-                        <Route path="/about" element={<About />} />
-                        <Route path="/recipes" element={<Recipes />} />
-                        <Route path="/myRecipes" element={<MyRecipes />} />
-                        <Route path="/newRecipe" element={<NewRecipe />} />
-                    </Routes>
-                </div></>
+            
         );
     
        if (!currentUser){ homepage=(
-            <><>
+            
                 <Card>
                     <Card.Header>
                         <Nav variant="tabs" defaultActiveKey="#first">
@@ -57,12 +46,7 @@ function SiteCards() {
                         </Nav>
                     </Card.Header>
                 </Card>
-            </><div className="Display">
-                    <Routes>
-                        <Route path="/about" element={<About />} />
-                        <Route path="/recipes" element={<Recipes />} />
-                    </Routes>
-                </div></>
+            
         );
     }  
     return   (
