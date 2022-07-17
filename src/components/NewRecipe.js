@@ -5,6 +5,12 @@ function NewRecipe() {
 
 	const navigate = useNavigate()
 
+	const handleAddIngredient = () => {
+		const inputState = {
+			
+		}
+	}
+
 	const [recipe, setRecipe] = useState({
 		recipename: '',
 		image: '',
@@ -12,8 +18,9 @@ function NewRecipe() {
 		difficulty: '',
 		preptime: '',
 		cooktime: '',
+		description: '',
         ingredients: '',
-        instructions: ''
+		steps: ''
 	})
 
 	async function handleSubmit(e) {
@@ -55,7 +62,7 @@ function NewRecipe() {
 						name="image"
 					/>
 				</div>
-                <div className="form-group">
+				<div className="form-group">
 					<label htmlFor="cuisines">Cuisines</label>
 					<input
 						value={recipe.cuisines}
@@ -95,6 +102,16 @@ function NewRecipe() {
 						name="cooktime"
 					/>
 				</div>
+				<div className="form-group">
+					<label htmlFor="description">Description</label>
+					<input
+						value={recipe.description}
+						onChange={e => setRecipe({ ...recipe, description: e.target.value })}
+						className="form-control"
+						id="description"
+						name="description"
+					/>
+				</div>
                 <div className="form-group">
 					<label htmlFor="ingredients">Ingredients</label>
 					<input
@@ -104,17 +121,20 @@ function NewRecipe() {
 						id="ingredients"
 						name="ingredients"
 					/>
+					<button>+</button>
 				</div>
 				<div className="form-group">
-					<label htmlFor="instructions">Instructions</label>
+					<label htmlFor="steps">Steps</label>
 					<input
-						value={recipe.instructions}
-						onChange={e => setRecipe({ ...recipe, instructions: e.target.value })}
+						value={recipe.steps}
+						onChange={e => setRecipe({ ...recipe, steps: e.target.value })}
 						className="form-control"
-						id="instructions"
-						name="instructions"
+						id="steps"
+						name="steps"
 					/>
+					<button>+</button>
 				</div>
+				
 				
 				<input className="btn btn-primary" type="submit" value="Add Recipe" />
 			</form>

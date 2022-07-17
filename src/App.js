@@ -17,11 +17,7 @@ function App() {
     <CurrentUserProvider>
       <BrowserRouter>
         <HeaderBar /> 
-<<<<<<< HEAD
         <SiteCards />
-=======
-         <SiteCards />
->>>>>>> f3997b7da635b37c6ddb3f8f304fc38c902ccade
         <Routes>
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
