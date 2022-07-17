@@ -9,6 +9,7 @@ import SignUpForm from './users/SignUpForm';
 import CurrentUserProvider from './contexts/CurrentUser';
 import { BrowserRouter } from 'react-router-dom';
 import NewRecipe from './components/NewRecipe';
+import MyRecipes from './components/MyRecipes';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/new" element={<NewRecipe />} />
+          <Route path="/recipes" element={<MyRecipes />} />
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>
