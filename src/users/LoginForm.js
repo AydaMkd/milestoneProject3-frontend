@@ -6,10 +6,6 @@ function LoginForm() {
 
     const navigate = useNavigate()
     
-    // if(localStorage.getItem('token')){
-    //     navigate('/')
-    //    }
- 
     const { setCurrentUser } = useContext(CurrentUser)
     // console.log(setCurrentUser)
    

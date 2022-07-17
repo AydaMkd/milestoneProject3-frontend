@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
 
+
 function NewRecipe() {
 
+<<<<<<< HEAD
 	const navigate = useNavigate()
 
 	const handleAddIngredient = () => {
@@ -29,14 +31,34 @@ function NewRecipe() {
 		await fetch(`http://localhost:5000/recipes`, {
 			method: 'POST',
 			headers: {
+=======
+    const navigate = useNavigate()
+   
+   
+    const [recipe, setRecipe] = useState({
+        recipename: '',
+        cuisines: '',
+		description:''
+    })
+   console.log(recipe)
+    async function handleSubmit(e) {
+        e.preventDefault()
+        const response = await fetch(`http://localhost:5000/api/recipes`, {
+            method: 'POST',
+            headers: {
+				'x-auth-token': localStorage.getItem('token'),
+>>>>>>> a6be7676fd81cf7b1d6d1acbdc6678de90b0b0f0
 				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(recipe)
+				
+            },
+            body: JSON.stringify(recipe)
 		})
-
-		navigate('/newrecipe')
+        const data = await response.json()
+        console.log(data)
+		navigate('/new')
+       
+       
 	}
-
 	return (
 		<main>
 			<h1>Add a New Recipe</h1>
@@ -52,6 +74,7 @@ function NewRecipe() {
 						name="recipename"
 					/>
 				</div>
+<<<<<<< HEAD
                 <div className="form-group">
 					<label htmlFor="image">Recipe Picture</label>
 					<input
@@ -64,40 +87,27 @@ function NewRecipe() {
 				</div>
 				<div className="form-group">
 					<label htmlFor="cuisines">Cuisines</label>
+=======
+				<div className="form-group">
+					<label htmlFor="cuisines">Cuisine</label>
+>>>>>>> a6be7676fd81cf7b1d6d1acbdc6678de90b0b0f0
 					<input
+						required
 						value={recipe.cuisines}
 						onChange={e => setRecipe({ ...recipe, cuisines: e.target.value })}
 						className="form-control"
-						id="cuisines" name="cuisines" />
-				</div>
-				<div className="form-group">
-					<label htmlFor="difficulty">Difficulty</label>
-					<input
-						required
-						value={recipe.difficulty}
-						onChange={e => setRecipe({ ...recipe, difficulty: e.target.value })}
-						className="form-control"
-						id="difficulty"
-						name="difficutly"
-					/>
-				</div>	
-                			
-				<div className="form-group">
-					<label htmlFor="preptime">Prep Time</label>
-					<input
-						value={recipe.preptime}
-						onChange={e => setRecipe({ ...recipe, preptime: e.target.value })}
-						className="form-control"
-						id="preptime"
-						name="preptime"
+						id="cuisines"
+						name="cuisines"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="cooktime">Cook Time</label>
+					<label htmlFor="description">Description</label>
 					<input
-						value={recipe.cooktime}
-						onChange={e => setRecipe({ ...recipe, cooktime: e.target.value })}
+					    required
+						value={recipe.description}
+						onChange={e => setRecipe({ ...recipe, description: e.target.value })}
 						className="form-control"
+<<<<<<< HEAD
 						id="cooktime"
 						name="cooktime"
 					/>
@@ -131,6 +141,10 @@ function NewRecipe() {
 						className="form-control"
 						id="steps"
 						name="steps"
+=======
+						id="description"
+						name="description"
+>>>>>>> a6be7676fd81cf7b1d6d1acbdc6678de90b0b0f0
 					/>
 					<button>+</button>
 				</div>
