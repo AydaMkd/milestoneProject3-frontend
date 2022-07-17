@@ -8,9 +8,27 @@ function SiteCards() {
 
     const { currentUser } = useContext(CurrentUser)
 
+<<<<<<< HEAD
    
     let homepage=(
             
+=======
+    return (
+        <>{
+            !currentUser ? <Card>
+                <Card.Header>
+                    <Nav variant="tabs" defaultActiveKey="#first">
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/recipes">Recipes</Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                </Card.Header>
+            </Card>
+                :
+>>>>>>> 65ba96e59418e76bed8b9296ba2889c24ea39784
                 <Card>
                     <Card.Header>
                         <Nav variant="tabs" defaultActiveKey="#first">
@@ -29,6 +47,7 @@ function SiteCards() {
                         </Nav>
                     </Card.Header>
                 </Card>
+<<<<<<< HEAD
             
         );
     
@@ -53,9 +72,11 @@ function SiteCards() {
         <div>
             {homepage}
         </div>
+=======
+        }
+        </>
+>>>>>>> 65ba96e59418e76bed8b9296ba2889c24ea39784
     )
 }
 
-
 export default SiteCards;
-

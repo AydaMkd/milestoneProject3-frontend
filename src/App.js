@@ -18,12 +18,19 @@ function App() {
 
     <CurrentUserProvider>
       <BrowserRouter>
+<<<<<<< HEAD
         <HeaderBar /> 
+=======
+        <HeaderBar />
+>>>>>>> 65ba96e59418e76bed8b9296ba2889c24ea39784
         <SiteCards />
         <Routes>
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
+<<<<<<< HEAD
           <Route path="/new" element={<NewRecipe />} />
+=======
+>>>>>>> 65ba96e59418e76bed8b9296ba2889c24ea39784
           <Route path="/about" element={<About />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/myRecipes" element={<MyRecipes />} />
