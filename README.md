@@ -49,8 +49,8 @@ Hangry Nomster
   ### Back End  
     - Node
     - MongoDb
-    - Sequelize
-    - PassportJS
+    - Mongoose
+    - JWT
 
 ## Install & Run
  (copy link )
