@@ -12,6 +12,7 @@ function NewRecipe() {
         cuisines: '',
 		description:''
     })
+
    console.log(recipe)
     async function handleSubmit(e) {
         e.preventDefault()
@@ -26,7 +27,7 @@ function NewRecipe() {
 		})
         const data = await response.json()
         console.log(data)
-		navigate('/new')
+		navigate('/recipes')
        
        
 	}
