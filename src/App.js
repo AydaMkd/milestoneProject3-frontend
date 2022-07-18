@@ -1,5 +1,5 @@
 
-        import React from 'react';
+import React from 'react';
 import ReactDOM from "react-dom/client";
 import './App.css';
 import HeaderBar from './components/HeaderBar';
@@ -24,7 +24,7 @@ function App() {
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/new" element={<NewRecipe />} />
-          <Route path="/recipes" element={<Recipes />} />
+          {/* <Route path="/recipes" element={<Recipes />} /> */}
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
