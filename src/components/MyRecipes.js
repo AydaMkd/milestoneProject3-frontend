@@ -7,8 +7,6 @@ function MyRecipes() {
 
 	// const {  } = useParams()
 
-	const navigate = useNavigate()
-
 	const [recipes, setRecipes] = useState(null)
 
 	useEffect(() => {
