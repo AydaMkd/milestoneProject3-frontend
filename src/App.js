@@ -10,6 +10,7 @@ import CurrentUserProvider from './contexts/CurrentUser';
 import { BrowserRouter } from 'react-router-dom';
 import NewRecipe from './components/NewRecipe';
 import Recipes from './components/Recipes';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/new" element={<NewRecipe />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>
