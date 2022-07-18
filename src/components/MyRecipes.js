@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router"
-import Search from "./Search";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 
+<<<<<<< HEAD
 
 function MyRecipes() {
 
@@ -48,6 +49,21 @@ function MyRecipes() {
     
 		</main>
 	)
+=======
+const MyRecipes = () => {
+    return (
+        <Container>
+            <Card border="info" >
+                <Card.Header className="blockquote mb-0 card-body">My Recipes</Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                    This is where we are going to keep "my recipes"
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+        </Container>
+    )
+>>>>>>> efacbbc3f345f5c6436ba4600aab18db63229042
 }
 
 export default MyRecipes

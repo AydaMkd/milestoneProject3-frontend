@@ -46,13 +46,13 @@ function HeaderBar() {
 
   return (
     <Navbar bg="light" expand="lg">
-      <Container>
+      <Container fluid>
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
 
         {loginActions}
         <Navbar.Toggle aria-controls="navbarScroll" />
 
-       
+        
       </Container>
     </Navbar>
   );
