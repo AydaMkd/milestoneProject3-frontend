@@ -1,17 +1,37 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router'
+import axios from "axios"
 
-const Search = (props) => {
-    let [searchTerm, setSearchTerm] = useState('')
+
+
+function Search () {
+    const [query, setQuery] = useState('');
+    const [data, setData] = useState([]);
+   
+    console.log((query))
+
+    const navigate = useNavigate()
+
+    useEffect(()=>{
+        const fetchRecipes = async () => {
+            const res =  await axios.get(`http://localhost:5000?q=${query}`)
+            setData(res.data);
+        };
+        fetchRecipes()
+        navigate(`/recipes/${query}`);
+    },[query])
 
     return (
-            <form onSubmit={(e) => props.handleSearch(e, searchTerm)}>
-                <input type="text" placeholder="Search Here" onChange={(e) => setSearchTerm(e.target.value)} />
+        <div>
+            
+                <input type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} />
                 <input type="submit" />
-            </form>
+           
+        </div>
     )
 }
 
-export default Search
+export default Search;
 
 // //saving some code for the search feature
 // {/* <Navbar.Collapse id="navbarScroll">

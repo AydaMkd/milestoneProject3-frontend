@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Search from "./Search";
 
 function Recipes() {
 
@@ -30,12 +31,13 @@ function Recipes() {
     }
 
     return (<>
+		<Search />
 
         {recipes.map((recipe) => {
             return (
                 <div className="col-sm-6" key={new Date(recipe.date).getUTCMilliseconds()}>
                     <h2>
-                        {recipe.name}
+                        {recipe.recipename}
                     </h2>
                     <p className="text-center">
                         {recipe.description}
