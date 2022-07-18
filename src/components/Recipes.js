@@ -37,10 +37,30 @@ function Recipes() {
                     <h2>
                         {recipe.recipename}
                     </h2>
-                    <p className="text-center">
+					<img style={{ maxWidth: 200 }} src={recipe.image} alt={recipe.recipename} />
+					<p className="text-center">
+                        {recipe.cuisines}
+                    </p>
+					<p className="text-center">
+                        {recipe.preptime}
+                    </p>
+					<p className="text-center">
+                        {recipe.cooktime}
+                    </p>
+                    
+					<p className="text-center">
+                        {recipe.ingredients}
+                    </p>
+					<p className="text-center">
+                        {recipe.directions}
+                    </p>
+					<p className="text-center">
+                        {recipe.steps}
+                    </p>
+					<p className="text-center">
                         {recipe.description}
                     </p>
-                    <img style={{ maxWidth: 200 }} src={recipe.image} alt={recipe.name} />
+                    
                 </div>
             )
         })
