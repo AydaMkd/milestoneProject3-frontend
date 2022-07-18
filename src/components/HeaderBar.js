@@ -7,7 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router";
 import { CurrentUser } from "../contexts/CurrentUser";
-import { Card } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 
 function HeaderBar() {
   const navigate = useNavigate();
@@ -46,15 +46,13 @@ function HeaderBar() {
   // console.log(currentUser)
 
   return (
-    
+
     <Navbar bg="light" expand="lg">
       <Container fluid>
+        <Image className="HangryLogo" src="./images/HangryLogo.jpeg" />
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
-
         {loginActions}
         <Navbar.Toggle aria-controls="navbarScroll" />
-
-        
       </Container>
     </Navbar>
   );
