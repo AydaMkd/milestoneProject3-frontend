@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 
 function Recipes() {
 
@@ -33,15 +36,26 @@ function Recipes() {
 
         {recipes.map((recipe) => {
             return (
-                <div className="col-sm-6" key={new Date(recipe.date).getUTCMilliseconds()}>
-                    <h2>
-                        {recipe.name}
-                    </h2>
-                    <p className="text-center">
-                        {recipe.description}
-                    </p>
-                    <img style={{ maxWidth: 200 }} src={recipe.image} alt={recipe.name} />
-                </div>
+                <Container>
+                    <Card>
+                        <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>{recipe.recipename}</Accordion.Header>
+                                <Accordion.Body>
+                                    <h4>{recipe.description}</h4>
+                                    <ul>
+                                        <li><b>Cuisine:</b> {recipe.cuisines}</li>
+                                        <li><b>Prep Time:</b> {recipe.preptime}</li>
+                                        <li><b>Cook Time:</b> {recipe.cooktime}</li>
+                                        <li><b>Ingredients:</b> {recipe.ingredients}</li>
+                                        <li><b>Number Of Steps:</b> {recipe.steps}</li>
+                                    </ul>
+                                    <p><b>Directions:</b> {recipe.directions}</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                    </Card>
+                </Container>
             )
         })
         }</>)

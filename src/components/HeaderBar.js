@@ -7,6 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router";
 import { CurrentUser } from "../contexts/CurrentUser";
+import { Card } from "react-bootstrap";
 
 function HeaderBar() {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ function HeaderBar() {
   // console.log(currentUser)
 
   return (
+    
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
