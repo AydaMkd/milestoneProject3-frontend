@@ -25,7 +25,7 @@ function App() {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/new" element={<NewRecipe />} />
           {/* <Route path="/recipes" element={<Recipes />} /> */}
-          <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/profile" element={<Profile />} /> */}
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>

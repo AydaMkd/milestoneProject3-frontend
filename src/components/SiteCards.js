@@ -38,7 +38,7 @@ function SiteCards() {
                     <Routes>
                         <Route path="/about" element={<About />} />
                         <Route path="/recipes" element={<Recipes />} />
-                        {/* <Route path="/profile" element={<Profile />} /> */}
+                        <Route path="/profile" element={<Profile />} />
                         <Route path="/newRecipe" element={<NewRecipe />} />
                     </Routes>
                 </div></>
