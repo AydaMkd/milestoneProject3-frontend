@@ -1,70 +1,84 @@
-// import Card from 'react-bootstrap/Card';
-// import Container from 'react-bootstrap/Container';
-
-// const Recipes = () => {
-//     return (
-//         <Container>
-//             <Card border="info" >
-//                 <Card.Header className="blockquote mb-0 card-body">Recipes</Card.Header>
-//                 <Card.Body>
-//                     <Card.Text>
-//                     This is where we are going to keep our recipes
-//                     </Card.Text>
-//                 </Card.Body>
-//             </Card>
-//         </Container>
-//     )
-// }
-
-// export default Recipes
-
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router"
-
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import { Image } from "react-bootstrap";
 
 function Recipes() {
 
-	// const {  } = useParams()
+    const [recipes, setRecipes] = useState(null)
+    // const resData = null
 
-	const navigate = useNavigate()
-
-	const [recipes, setRecipes] = useState(null)
-
-	useEffect(() => {
-		const fetchData = async () => {
-			const response = await fetch(`http://localhost:5000/api/recipes`,{
+    useEffect(() => {
+        console.log('useEffect')
+        const fetchData = async () => {
+            const response = await fetch(`http://localhost:5000/api/recipes`, {
 
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),
                     'Content-Type': 'application/json'
-                    
                 },
             })
-			const resData = await response.json()
-			setRecipes(resData)
-		}
-		fetchData()
-	}, [])
+            const resData = await response.json()
+            // if data is the same, don't update
+            if (resData != recipes) {
+                setRecipes(resData)
+            }
+        }
+        fetchData()
+    }, [])
     console.log(recipes)
 
-	if (recipes === null) {
-		return <h1>Loading</h1>
-	}
+    if (recipes === null) {
+        return <h1>Loading</h1>
+    }
 
+    return (<>
 
-	return (
-		<main>
-        <div className="row">
-				<div className="col-sm-6">
-					<img style={{ maxWidth: 200 }} src={recipes[0].image} alt={recipes[0].recipename} />
-                    <h3>{recipes[0].cuisines}</h3><br/>
-                    <h3>{recipes[0].description}</h3>
-					
-				</div>
-                </div>
-    
-		</main>
-	)
+        {recipes.map((recipe) => {
+            return (
+                <Container>
+                    <Card>
+                        <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>{recipe.recipename}</Accordion.Header>
+                                <Accordion.Body>
+                                    <div class="container my-5">
+                                        <div class="card row flex-row-reverse">
+                                            <img class="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
+                                            <div class="col-lg-8 card-body">
+                                                <h4 class="card-title">{recipe.description}</h4>
+                                                <p class="card-text">
+                                                    <ul>
+                                                        <li><b>Cuisine:</b> {recipe.cuisines}</li>
+                                                        <li><b>Prep Time:</b> {recipe.preptime}</li>
+                                                        <li><b>Cook Time:</b> {recipe.cooktime}</li>
+                                                        <li><b>Ingredients:</b> {recipe.ingredients}</li>
+                                                        <li><b>Steps:</b> {recipe.steps}</li>
+                                                    </ul>
+                                                </p>
+                                                <p>{recipe.directions}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                    </Card>
+                </Container>
+            )
+        })
+        }</>)
 }
 
 export default Recipes
+{/* <Card.Img className="card-img-top" src={recipe.image} alt="food image" />
+<h4>{recipe.description}</h4>
+<ul>
+    <li><b>Cuisine:</b> {recipe.cuisines}</li>
+    <li><b>Prep Time:</b> {recipe.preptime}</li>
+    <li><b>Cook Time:</b> {recipe.cooktime}</li>
+    <li><b>Ingredients:</b> {recipe.ingredients}</li>
+    <li><b>Steps:</b> {recipe.steps}</li>
+</ul>
+<p><b>Directions:</b> {recipe.directions}</p> */}
