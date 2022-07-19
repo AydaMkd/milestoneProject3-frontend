@@ -29,10 +29,10 @@ Team Hungry
 
 ### Credits
 Made by:
-- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Christina Hurt](https://www.linkedin.com/in/christina-hurt-27445550/)
-- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Justin Whistle](https://www.linkedin.com/in/justin-whistle/)
-- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Ayda Mkaddem](https://www.linkedin.com/in/ayda-mkaddem-5a6b6a238/)
-- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Bertha Zhao](https://www.linkedin.com/in/bertha-zhao-21653b91/)       
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)Click -->][Christina Hurt](https://www.linkedin.com/in/christina-hurt-27445550/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)Click -->][Justin Whistle](https://www.linkedin.com/in/justin-whistle/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)Click -->][Ayda Mkaddem](https://www.linkedin.com/in/ayda-mkaddem-5a6b6a238/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)Click -->][Bertha Zhao](https://www.linkedin.com/in/bertha-zhao-21653b91/)       
 
 
 ## Application name
