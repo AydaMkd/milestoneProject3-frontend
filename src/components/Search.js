@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
+import axios from "axios";
 
 function Search() {
 
@@ -11,7 +12,7 @@ function Search() {
         e.preventDefault()
             const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
 
-import axios from "axios"
+
 
 //function Search () {
     //const [query, setQuery] = useState('');
