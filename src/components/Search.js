@@ -1,14 +1,37 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
+
 function Search() {
 
     const [menus, setMenus] = useState('')
     const [query, setQuery] = useState('');
-    // const resData = null
+     const resData = null
    
     async function handleSearch(e) {
         e.preventDefault()
             const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
+
+import axios from "axios"
+
+//function Search () {
+    //const [query, setQuery] = useState('');
+    //const [data, setData] = useState([]);
+   
+    //console.log((query))
+
+    //const navigate = useNavigate()
+      
+    //function handleSearch(e) {
+        //e.preventDefault()
+        //const fetchRecipes = async () => {
+            //const res =  await axios.get(`http://localhost:5000/?q=${query}`)
+            //setData(res.data);
+            
+        //};
+        //fetchRecipes()
+        //navigate(`/recipes/${query}`);
+    //}
+
 
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),
@@ -34,6 +57,7 @@ function Search() {
    <ul>
   {menus.map(menu => {
     return (
+
       <ul>
       <li >
         {menu.recipename}
@@ -63,3 +87,40 @@ function Search() {
 }
 
 export default Search;
+
+        //<div>
+            
+                //<input type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query} />
+                //<input type="submit" onClick={handleSearch} />
+           
+        //</div>
+    //)
+//}
+
+//export default Search;
+
+// //saving some code for the search feature
+// {/* <Navbar.Collapse id="navbarScroll">
+// <Nav
+//   className="me-auto my-2 my-lg-0"
+//   style={{ maxHeight: "100px" }}
+//   navbarScroll
+// ></Nav>
+// <Form className="d-flex">
+  
+//   <NavDropdown title="Search by" id="navbarScrollingDropdown">
+//     <NavDropdown.Item href="#action3">Cuisine</NavDropdown.Item>
+//     <NavDropdown.Item href="#action4">Rating</NavDropdown.Item>
+//     <NavDropdown.Item href="#action5">Difficulty</NavDropdown.Item>
+//   </NavDropdown>
+//   <Button variant="outline-success">Search</Button>
+//   <Form.Control
+//     type="search"
+//     placeholder="Search"
+//     className="me-2"
+//     aria-label="Search"
+//   />
+// </Form>
+// </Navbar.Collapse> */}
+
+

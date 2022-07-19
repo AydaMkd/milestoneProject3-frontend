@@ -45,9 +45,9 @@ function NewRecipe() {
 			<Card>
 				<Card.Body>
 					<main>
-						<h1>Add a New Recipe</h1>
+						<h1 className="text-center">Add a New Recipe</h1>
 						<form onSubmit={handleSubmit}>
-							<div className="form-group">
+							<div className="form-group ">
 								<label htmlFor="recipename">Recipe Name</label>
 								<input
 									required
