@@ -13,7 +13,7 @@ function Recipes() {
     useEffect(() => {
         console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/api/recipes`, {
+            const response = await fetch(`http://localhost:5000/api/recipes/`, {
 
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),

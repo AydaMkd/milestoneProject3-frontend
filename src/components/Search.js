@@ -1,37 +1,103 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
+
+function Search() {
+
+    const [menus, setMenus] = useState('')
+    const [query, setQuery] = useState('');
+     const resData = null
+   
+    async function handleSearch(e) {
+        e.preventDefault()
+            const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
+
 import axios from "axios"
 
-function Search () {
-    const [query, setQuery] = useState('');
-    const [data, setData] = useState([]);
+//function Search () {
+    //const [query, setQuery] = useState('');
+    //const [data, setData] = useState([]);
    
-    console.log((query))
+    //console.log((query))
 
-    const navigate = useNavigate()
+    //const navigate = useNavigate()
       
-    function handleSearch(e) {
-        e.preventDefault()
-        const fetchRecipes = async () => {
-            const res =  await axios.get(`http://localhost:5000/?q=${query}`)
-            setData(res.data);
+    //function handleSearch(e) {
+        //e.preventDefault()
+        //const fetchRecipes = async () => {
+            //const res =  await axios.get(`http://localhost:5000/?q=${query}`)
+            //setData(res.data);
             
-        };
-        fetchRecipes()
-        navigate(`/recipes/${query}`);
-    }
+        //};
+        //fetchRecipes()
+        //navigate(`/recipes/${query}`);
+    //}
+
+
+                headers: {
+                    'x-auth-token': localStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                },
+            })
+            const resData = await response.json()
+            // if data is the same, don't update
+           
+                setMenus(resData)
+            
+        }
+    
+    console.log(menus)
+    console.log(query)
+    let display = (
+        <>
+         
+        </>
+      );
+    if (menus.length > 0) {display = (
+   <>
+   <ul>
+  {menus.map(menu => {
+    return (
+
+      <ul>
+      <li >
+        {menu.recipename}
+      </li>
+      <li >
+      <img width="200" height="200" src={menu.image} />
+      </li>
+      </ul>
+    )
+  })}
+</ul>
+
+   </>
+    )
+}
 
     return (
         <div>
             
-                <input type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query} />
+                <input type="text" placeholder="Search recipes by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
                 <input type="submit" onClick={handleSearch} />
-           
+               
+         {display}
         </div>
+       
     )
 }
 
 export default Search;
+
+        //<div>
+            
+                //<input type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query} />
+                //<input type="submit" onClick={handleSearch} />
+           
+        //</div>
+    //)
+//}
+
+//export default Search;
 
 // //saving some code for the search feature
 // {/* <Navbar.Collapse id="navbarScroll">
@@ -56,4 +122,5 @@ export default Search;
 //   />
 // </Form>
 // </Navbar.Collapse> */}
+
 
