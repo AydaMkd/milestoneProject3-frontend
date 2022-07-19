@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import axios from "axios"
 
-
-
 function Search () {
     const [query, setQuery] = useState('');
     const [data, setData] = useState([]);
@@ -12,20 +10,24 @@ function Search () {
 
     const navigate = useNavigate()
 
-    useEffect(()=>{
+        
+
+    function handleSearch(e) {
+        e.preventDefault()
         const fetchRecipes = async () => {
-            const res =  await axios.get(`http://localhost:5000?q=${query}`)
+            const res =  await axios.get(`http://localhost:5000/api/recipes/?q=${query}`)
             setData(res.data);
+            
         };
         fetchRecipes()
         navigate(`/recipes/${query}`);
-    },[query])
+    }
 
     return (
         <div>
             
-                <input type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} />
-                <input type="submit" />
+                <input type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query} />
+                <input type="submit" onClick={handleSearch} />
            
         </div>
     )
