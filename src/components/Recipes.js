@@ -35,13 +35,12 @@ function Recipes() {
     }
 
     return (<>
-<<<<<<< HEAD
-		<Search />
-
-=======
-        <h1 className="text-center">Recipes</h1>
->>>>>>> 8d558d04921bda2dd53d8ae9203e45a0a1f20d58
+	<h1 className="text-center">Recipes</h1>
+	<div className="text-center">
+	<Search />
+	</div>
         {recipes.map((recipe) => {
+			
             return (
                 <Container>
                     <Card>

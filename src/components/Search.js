@@ -9,13 +9,11 @@ function Search () {
     console.log((query))
 
     const navigate = useNavigate()
-
-        
-
+      
     function handleSearch(e) {
         e.preventDefault()
         const fetchRecipes = async () => {
-            const res =  await axios.get(`http://localhost:5000/api/recipes/?q=${query}`)
+            const res =  await axios.get(`http://localhost:5000/?q=${query}`)
             setData(res.data);
             
         };
