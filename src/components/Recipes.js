@@ -34,7 +34,7 @@ function Recipes() {
     }
 
     return (<>
-
+        <h1 className="text-center">Recipes</h1>
         {recipes.map((recipe) => {
             return (
                 <Container>
