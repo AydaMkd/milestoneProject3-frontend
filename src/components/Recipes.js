@@ -35,8 +35,12 @@ function Recipes() {
     }
 
     return (<>
+<<<<<<< HEAD
 		<Search />
 
+=======
+        <h1 className="text-center">Recipes</h1>
+>>>>>>> 8d558d04921bda2dd53d8ae9203e45a0a1f20d58
         {recipes.map((recipe) => {
             return (
                 <Container>
