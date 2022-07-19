@@ -49,14 +49,20 @@ function Nutrition() {
     if (arrays!=null){
         let sum1 = 0;
         let sum2=0;
+        let sum = 0;
+        let item= ''
 
         for (const key in arrays) {
             sum1 = (Object.values(arrays)[key].calories)
-            sum2 = (Object.values(arrays)[key].serving_size_g)}
+            sum = (Object.values(arrays)[key].serving_size_g)
+            item = (Object.values(arrays)[key].name)}
+            sum2 = (sum * 0.035).toFixed(2);
+            
+
            
             console.log(sum2)
         
-            return "Total number of calories is " + sum1 + " per serving. Serving size is " + sum2 + " g"
+            return  String("Total number of calories for a serving of " + item + " is " + sum1 + " per serving.\nServing size is " + sum2 + " oz.")
     }
 }
 
@@ -66,6 +72,7 @@ function Nutrition() {
        
    <>
   <h3>{recipeCalories}</h3>
+  
 
    </>
     )
