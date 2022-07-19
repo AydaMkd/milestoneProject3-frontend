@@ -29,18 +29,23 @@ Team Hungry
 
 ### Credits
 Made by:
-- [Christina Hurt](https://www.linkedin.com/in/christina-hurt-27445550/)
-- [Justin Whistle](https://www.linkedin.com/in/justin-whistle/)
-- [Ayda Mkaddem](https://www.linkedin.com/in/ayda-mkaddem-5a6b6a238/)
-- [Bertha Zhao](https://www.linkedin.com/in/bertha-zhao-21653b91/)       
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Christina Hurt](https://www.linkedin.com/in/christina-hurt-27445550/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Justin Whistle](https://www.linkedin.com/in/justin-whistle/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Ayda Mkaddem](https://www.linkedin.com/in/ayda-mkaddem-5a6b6a238/)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png)][Bertha Zhao](https://www.linkedin.com/in/bertha-zhao-21653b91/)       
 
 
 ## Application name
 
-Hangry Nomster
+![Image of our logo](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/HangryLogo.jpeg?raw=true)
 
 ## Wireframe
-(add image of wireframe)
+ ### Home Page before Login
+ ![Image of our Home page before login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/HomePage.png?raw=true)
+ ![Image of our recipes before login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/Recipes.png?raw=true)
+ ### Home Page after Login
+![Image of our Home Page after login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/Profile.png?raw=true)
+![Image of My Recipes after login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/MyRecipes.png?raw=true) 
 
 ## Technology
   ### Front End
@@ -91,7 +96,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 - When working as a team, make sure to work in the latest version of the repository.
 - git pull origin main it is a must, so you do not override the previous work of your team.
 - Connecting the Front-End with Back-End.
--
+- Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a regression in the application. 
 - 
 ### Work In Progress
 - Calorie Counts
