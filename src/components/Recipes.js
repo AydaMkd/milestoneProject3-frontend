@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-<<<<<<< HEAD
 import Search from "./Search";
-=======
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { Image } from "react-bootstrap";
->>>>>>> afdd3c5bfdba8db6086ec43982ea956c17d522a2
 
 function Recipes() {
 
@@ -42,17 +39,6 @@ function Recipes() {
 
         {recipes.map((recipe) => {
             return (
-<<<<<<< HEAD
-                <div className="col-sm-6" key={new Date(recipe.date).getUTCMilliseconds()}>
-                    <h2>
-                        {recipe.recipename}
-                    </h2>
-                    <p className="text-center">
-                        {recipe.description}
-                    </p>
-                    <img style={{ maxWidth: 200 }} src={recipe.image} alt={recipe.name} />
-                </div>
-=======
                 <Container>
                     <Card>
                         <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
@@ -82,14 +68,13 @@ function Recipes() {
                         </Accordion>
                     </Card>
                 </Container>
->>>>>>> afdd3c5bfdba8db6086ec43982ea956c17d522a2
             )
         })
         }</>)
 }
 
 export default Recipes
-{/* <Card.Img className="card-img-top" src={recipe.image} alt="food image" />
+/* <Card.Img className="card-img-top" src={recipe.image} alt="food image" />
 <h4>{recipe.description}</h4>
 <ul>
     <li><b>Cuisine:</b> {recipe.cuisines}</li>
@@ -98,4 +83,4 @@ export default Recipes
     <li><b>Ingredients:</b> {recipe.ingredients}</li>
     <li><b>Steps:</b> {recipe.steps}</li>
 </ul>
-<p><b>Directions:</b> {recipe.directions}</p> */}
+<p><b>Directions:</b> {recipe.directions}</p> */
