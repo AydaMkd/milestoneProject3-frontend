@@ -13,6 +13,7 @@ import Nutrition from './components/Nutrition';
 import Recipes from './components/Recipes';
 import About from './components/About';
 import MyRecipes from './components/MyRecipes';
+import Search from './components/Search'
 
 function App() {
 
@@ -28,7 +29,8 @@ function App() {
           <Route path="/recipes" element={<Recipes />} /> 
           <Route path="/myRecipes" element={<MyRecipes />} /> 
           <Route path="/newRecipe" element={<NewRecipe />} />
-          <Route path="/nutrition" element={<Nutrition />} />     
+          <Route path="/nutrition" element={<Nutrition />} />
+          <Route path="/search/:query" element={<Search />} />    
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>

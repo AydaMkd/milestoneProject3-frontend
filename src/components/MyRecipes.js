@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button'
 
 function Profile() {
 
@@ -58,6 +59,9 @@ function Profile() {
                                                     </ul>
                                                 </p>
                                                 <p>{myrecipe.directions}</p>
+                                                <Button>Edit Recipe</Button>
+                                                <br></br>
+                                                <Button>Delete Recipe</Button>
                                             </div>
                                         </div>
                                     </div>

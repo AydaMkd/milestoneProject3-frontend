@@ -3,6 +3,7 @@ import Search from "./Search";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button'
 
 function Recipes() {
 
@@ -33,15 +34,21 @@ function Recipes() {
         return <h1>Loading</h1>
     }
 
+
+
+    
+
     return (
         <>
             <h1 className="text-center">Recipes</h1>
             <div className="text-center">
+                
                 <Search />
             </div>
             {recipes.map((recipe) => {
                 return (
                     <Container>
+                        
                         <Card>
                             <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
                                 <Accordion.Item eventKey="0">
@@ -61,6 +68,7 @@ function Recipes() {
                                                             <li><b>Directions: </b> {recipe.directions}</li>
                                                         </ul>
                                                     </p>
+                                                    <Button>Comment</Button>
                                                 </div>
                                             </div>
                                         </div>
