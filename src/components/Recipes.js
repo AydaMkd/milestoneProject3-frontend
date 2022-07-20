@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Search from "./Search";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
@@ -34,8 +35,12 @@ function Recipes() {
     }
 
     return (<>
-
+	<h1 className="text-center">Recipes</h1>
+	<div className="text-center">
+	<Search />
+	</div>
         {recipes.map((recipe) => {
+			
             return (
                 <Container>
                     <Card>
@@ -72,7 +77,7 @@ function Recipes() {
 }
 
 export default Recipes
-{/* <Card.Img className="card-img-top" src={recipe.image} alt="food image" />
+/* <Card.Img className="card-img-top" src={recipe.image} alt="food image" />
 <h4>{recipe.description}</h4>
 <ul>
     <li><b>Cuisine:</b> {recipe.cuisines}</li>
@@ -81,4 +86,4 @@ export default Recipes
     <li><b>Ingredients:</b> {recipe.ingredients}</li>
     <li><b>Steps:</b> {recipe.steps}</li>
 </ul>
-<p><b>Directions:</b> {recipe.directions}</p> */}
+<p><b>Directions:</b> {recipe.directions}</p> */

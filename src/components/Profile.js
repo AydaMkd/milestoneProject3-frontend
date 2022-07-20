@@ -35,7 +35,7 @@ function Profile() {
     }
 
     return (<>
-
+<h1 className="text-center">Profile/My Recipes</h1>
         {myrecipes.map((myrecipe) => {
             return (
                 <Container>
