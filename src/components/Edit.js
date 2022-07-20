@@ -3,9 +3,11 @@ import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import Card from 'react-bootstrap/Card';
 
-function NewRecipe() {
+
+function Edit() {
 
 	const navigate = useNavigate()
+
 
 	const [recipe, setRecipe] = useState({
 		recipename: '',
@@ -16,14 +18,15 @@ function NewRecipe() {
 		cooktime: '',
 		ingredients: '',
 		directions: '',
+		steps: '',
 		description: ''
 	})
 
 	console.log(recipe)
 	async function handleSubmit(e) {
 		e.preventDefault()
-		const response = await fetch(`http://localhost:5000/api/recipes`, {
-			method: 'POST',
+		const response = await fetch(`http://localhost:5000/api/recipes/{id}`, {
+			method: 'Put',
 			headers: {
 				'x-auth-token': localStorage.getItem('token'),
 				'Content-Type': 'application/json'
@@ -34,16 +37,16 @@ function NewRecipe() {
 		const data = await response.json()
 		console.log(data)
 		navigate('/recipes')}
-	}
-  
+
+	
 	return (
 		<Container>
 			<Card>
 				<Card.Body>
 					<main>
-						<h1 className="text-center">Add a New Recipe</h1>
+						<h1>Add a New Recipe</h1>
 						<form onSubmit={handleSubmit}>
-							<div className="form-group ">
+							<div className="form-group">
 								<label htmlFor="recipename">Recipe Name</label>
 								<input
 									required
@@ -109,6 +112,17 @@ function NewRecipe() {
 									/>
 								</div>
 								<div className="form-group">
+									<label htmlFor="ingredients">Ingredients</label>
+									<input
+										required
+										value={recipe.ingredients}
+										onChange={e => setRecipe({ ...recipe, ingredients: e.target.value })}
+										className="form-control"
+										id="ingredients"
+										name="ingredients"
+									/>
+								</div>
+								<div className="form-group">
 									<label htmlFor="directions">Directions</label>
 									<input
 										required
@@ -120,14 +134,14 @@ function NewRecipe() {
 									/>
 								</div>
 								<div className="form-group">
-									<label htmlFor="ingredients">Ingredients</label>
+									<label htmlFor="steps">Steps</label>
 									<input
 										required
-										value={recipe.ingredients}
-										onChange={e => setRecipe({ ...recipe, ingredients: e.target.value })}
+										value={recipe.steps}
+										onChange={e => setRecipe({ ...recipe, steps: e.target.value })}
 										className="form-control"
-										id="ingredients"
-										name="ingredients"
+										id="steps"
+										name="steps"
 									/>
 								</div>
 								<div className="form-group">
@@ -142,7 +156,7 @@ function NewRecipe() {
 									/>
 								</div>
 							</div>
-							<input className="btn btn-primary" type="submit" value="Add Recipe" />
+							<input className="btn btn-primary" type="submit" value="Edit Recipe" />
 						</form>
 					</main>
 				</Card.Body>
@@ -151,4 +165,4 @@ function NewRecipe() {
 	)
 }
 
-export default NewRecipe
+export default Edit

@@ -11,6 +11,8 @@ import { BrowserRouter } from 'react-router-dom';
 import NewRecipe from './components/NewRecipe';
 import Nutrition from './components/Nutrition';
 import Recipes from './components/Recipes';
+import Profile from './components/Profile';
+import Edit from './components/Edit';
 import About from './components/About';
 import MyRecipes from './components/MyRecipes';
 import Search from './components/Search'
@@ -25,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="/edit" element={<Edit />} />
           <Route path="/about" element={<About />} /> 
           <Route path="/recipes" element={<Recipes />} /> 
           <Route path="/myRecipes" element={<MyRecipes />} /> 
