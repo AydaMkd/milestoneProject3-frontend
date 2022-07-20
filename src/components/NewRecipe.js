@@ -3,11 +3,9 @@ import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import Card from 'react-bootstrap/Card';
 
-
 function NewRecipe() {
 
 	const navigate = useNavigate()
-
 
 	const [recipe, setRecipe] = useState({
 		recipename: '',
@@ -18,7 +16,6 @@ function NewRecipe() {
 		cooktime: '',
 		ingredients: '',
 		directions: '',
-		steps: '',
 		description: ''
 	})
 
@@ -37,16 +34,16 @@ function NewRecipe() {
 		const data = await response.json()
 		console.log(data)
 		navigate('/recipes')}
-
-	
+	}
+  
 	return (
 		<Container>
 			<Card>
 				<Card.Body>
 					<main>
-						<h1>Add a New Recipe</h1>
+						<h1 className="text-center">Add a New Recipe</h1>
 						<form onSubmit={handleSubmit}>
-							<div className="form-group">
+							<div className="form-group ">
 								<label htmlFor="recipename">Recipe Name</label>
 								<input
 									required
@@ -112,17 +109,6 @@ function NewRecipe() {
 									/>
 								</div>
 								<div className="form-group">
-									<label htmlFor="ingredients">Ingredients</label>
-									<input
-										required
-										value={recipe.ingredients}
-										onChange={e => setRecipe({ ...recipe, ingredients: e.target.value })}
-										className="form-control"
-										id="ingredients"
-										name="ingredients"
-									/>
-								</div>
-								<div className="form-group">
 									<label htmlFor="directions">Directions</label>
 									<input
 										required
@@ -134,14 +120,14 @@ function NewRecipe() {
 									/>
 								</div>
 								<div className="form-group">
-									<label htmlFor="steps">Steps</label>
+									<label htmlFor="ingredients">Ingredients</label>
 									<input
 										required
-										value={recipe.steps}
-										onChange={e => setRecipe({ ...recipe, steps: e.target.value })}
+										value={recipe.ingredients}
+										onChange={e => setRecipe({ ...recipe, ingredients: e.target.value })}
 										className="form-control"
-										id="steps"
-										name="steps"
+										id="ingredients"
+										name="ingredients"
 									/>
 								</div>
 								<div className="form-group">

@@ -1,36 +1,48 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router'
+import { useState } from 'react'
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import { useNavigate } from "react-router-dom";
+
 function Search() {
 
     const [menus, setMenus] = useState('')
     const [query, setQuery] = useState('');
-    // const resData = null
-   
+
+    const resData = null
+    const navigate = useNavigate()
+
     async function handleSearch(e) {
         e.preventDefault()
-            const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
+        const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
 
-                headers: {
-                    'x-auth-token': localStorage.getItem('token'),
-                    'Content-Type': 'application/json'
-                },
-            })
-            const resData = await response.json()
-            // if data is the same, don't update
-           
-                setMenus(resData)
-            
-        }
-    
+
+
+            headers: {
+                'x-auth-token': localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+            },
+        })
+
+        const resData = await response.json()
+        // if data is the same, don't update
+
+        setMenus(resData)
+        //navigate(`/search/${query}`)
+
+
+    }
+
     console.log(menus)
     console.log(query)
     
     
     let display = (
         <>
-         
+
         </>
-      );
+
+{/*      );
     if (menus.length > 0) {display = (
    <>
    <ul>
@@ -49,22 +61,117 @@ function Search() {
       </ul>
     )
   })}
-</ul>
+</ul> */}
 
-   </>
-    )
-}
+    );
+    if (menus.length > 0) {
+        display = (
+            <>
+
+
+                {menus.map(menu => {
+                    return (
+                        <div>
+                            
+                            {/* <p>{menu.recipename}</p>
+                            <p><img width="200" height="200" src={menu.image} /></p>
+                            <p>{menu.preptime}</p> */}
+                            <Container>
+                                
+                                <Card>
+                                    <Accordion defaultActiveKey={new Date(menu.date).getUTCMilliseconds()}>
+                                        <Accordion.Item eventKey="0">
+                                            <Accordion.Header>{menu.recipename}</Accordion.Header>
+                                            <Accordion.Body>
+                                                <div class="container my-5">
+                                                    <div class="card row flex-row-reverse">
+                                                        <img class="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
+                                                        <div class="col-lg-8 card-body">
+                                                            <h4 class="card-title">{menu.description}</h4>
+                                                            <p class="card-text">
+                                                                <ul>
+                                                                    <li><b>Cuisine:</b> {menu.cuisines}</li>
+                                                                    <li><b>Prep Time:</b> {menu.preptime}</li>
+                                                                    <li><b>Cook Time:</b> {menu.cooktime}</li>
+                                                                    <li><b>Ingredients:</b> {menu.ingredients}</li>
+                                                                    <li><b>Directions: </b> {menu.directions}</li>
+                                                                </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                </Card>
+                            </Container>
+                           
+                        </div>
+                        
+                    )
+                })}
+
+
+            </>
+        )
+        
+    }
 
     return (
         <div>
-            
-                <input type="text" placeholder="Search recipes by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
-                <input type="submit" onClick={handleSearch} />
-               
-         {display}
+            <input type="text" placeholder="Search recipes by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
+            <input type="submit" onClick={handleSearch} />
+            {display}
+            <br></br>
         </div>
-       
     )
 }
 
 export default Search;
+
+    // if (menus.length > 0) {display = (
+    //             <>
+       
+    //             {menus.map(menu => {
+    //     return (
+            // <Container>
+            //     <Card>
+            //         <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+            //             <Accordion.Item eventKey="0">
+            //                 <Accordion.Header>{menu.recipename}</Accordion.Header>
+            //                 <Accordion.Body>
+            //                     <div class="container my-5">
+            //                         <div class="card row flex-row-reverse">
+            //                             <img class="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
+            //                             <div class="col-lg-8 card-body">
+            //                                 <h4 class="card-title">{recipe.description}</h4>
+            //                                 <p class="card-text">
+            //                                     <ul>
+            //                                         <li><b>Cuisine:</b> {menu.cuisines}</li>
+            //                                         <li><b>Prep Time:</b> {menu.preptime}</li>
+            //                                         <li><b>Cook Time:</b> {menu.cooktime}</li>
+            //                                         <li><b>Ingredients:</b> {menu.ingredients}</li>
+            //                                         <li><b>Directions: </b> {menu.directions}</li>
+            //                                     </ul>
+            //                                 </p>
+            //                             </div>
+            //                         </div>
+            //                     </div>
+            //                 </Accordion.Body>
+            //             </Accordion.Item>
+            //         </Accordion>
+            //     </Card>
+            // </Container>
+    //     )
+    // })
+    // }
+    // </>)}
+
+
+    
+    
+  
+
+
+
+

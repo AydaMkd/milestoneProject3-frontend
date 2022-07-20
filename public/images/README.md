@@ -42,9 +42,7 @@ Made by:
 
 ## Wireframe
 <br>
- 
  ### Home Page before Login
-
  ![Image of our Home page before login](https://github.com/AydaMkd/milestoneProject3-frontend/blob/main/public/images/HomePage.png?raw=true)
  <br>
 
@@ -79,19 +77,7 @@ Made by:
 User should be able to submit their own recipes, keep their favorite receipts, rate and comment in other user's recipes. 
 
 ## Sources
-### Learned to align images on readme.
-(https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
-
-### YouTube tutorial on how to start a recipe app.
-
-(https://www.youtube.com/watch?v=xc4uOzlndAk)
-
-### guide to add background images.
-(https://www.w3schools.com/jsref/prop_style_backgroundimage.asp)
-
-### bootstrap cards documentation.
-(https://www.w3schools.com/bootstrap4/bootstrap_cards.asp)
-
+(copy link of our souces)
 ## Tracking progress
 
 - [Trello](https://trello.com/invite/b/AsBfEMwg/66a0d22147eb32999c88a726b98d6b04/kans-sd-01-final-project)
@@ -119,15 +105,12 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 ### Issues
 
 #### Working as a team being in constant communication is key. We do run into a merge issues with our branches.
-<br>
-
 ### What we learned:
 - When working as a team, make sure to work in the latest version of the repository.
 - git pull origin main it is a must, so you do not override the previous work of your team.
 - Connecting the Front-End with Back-End.
 - Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a regression in the application. 
-- Time frame, Install everything we want in short amount of time.
-
+- 
 ### Work In Progress
 - Calorie Counts
 - Serving Conversion (MyCookbook.io)

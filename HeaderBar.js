@@ -46,7 +46,7 @@ function HeaderBar() {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Image className="HangryLogo" src="./images/HangryLogo2.jpeg" />
-        <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
+        <Navbar.Brand href="#"><b>"EAT WHATEVER YOU WANT, AND IF ANYONE TRIES TO LECTURE YOU ABOUT YOUR WEIGHT, EAT THEM TOO"</b></Navbar.Brand>
         {loginActions}
         <Navbar.Toggle aria-controls="navbarScroll" />
       </Container>

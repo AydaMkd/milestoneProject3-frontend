@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import Search from "./Search";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { Image } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router"
+import Button from 'react-bootstrap/Button'
 
 function Recipes() {
    
@@ -47,6 +49,7 @@ function Recipes() {
     if (recipes === null) {
         return <h1>Loading</h1>
     }
+
    function editRecipe(){
     navigate("/edit")
    }
@@ -107,13 +110,3 @@ function Recipes() {
 }
 
 export default Recipes
-{/* <Card.Img className="card-img-top" src={recipe.image} alt="food image" />
-<h4>{recipe.description}</h4>
-<ul>
-    <li><b>Cuisine:</b> {recipe.cuisines}</li>
-    <li><b>Prep Time:</b> {recipe.preptime}</li>
-    <li><b>Cook Time:</b> {recipe.cooktime}</li>
-    <li><b>Ingredients:</b> {recipe.ingredients}</li>
-    <li><b>Steps:</b> {recipe.steps}</li>
-</ul>
-<p><b>Directions:</b> {recipe.directions}</p> */}
