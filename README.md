@@ -79,7 +79,7 @@ Made by:
 User should be able to submit their own recipes, keep their favorite receipts, rate and comment in other user's recipes. 
 
 ## Sources
-### Learn to align images on readme.
+### Learned to align images on readme.
 (https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
 
 ### YouTube tutorial on how to start a recipe app.
