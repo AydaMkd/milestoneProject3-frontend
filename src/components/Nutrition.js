@@ -27,7 +27,7 @@ function Nutrition() {
             const response = await fetch(
                 `https://api.calorieninjas.com/v1/nutrition?query=` + query,{
                 headers: {
-                  'X-Api-Key': 'I3BNw6tXJkLRpwGwAizAWA==7h85UBkH3sFR1NOb',
+                  'X-Api-Key': '',
                   
                 },
                 contentType: 'application/json',
