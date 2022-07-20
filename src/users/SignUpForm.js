@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { useNavigate, useParams } from "react-router"
+import { useState } from "react"
+import { useNavigate } from "react-router"
 function SignUpForm() {
 
 	const navigate = useNavigate();
@@ -40,7 +40,6 @@ function SignUpForm() {
 							name="username"
 						/>
 					</div>
-					
 				</div>
 				<div className="row">
 					<div className="col-sm-6 form-group">
