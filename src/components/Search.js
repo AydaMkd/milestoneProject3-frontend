@@ -14,24 +14,7 @@ function Search() {
 
 
 
-//function Search () {
-    //const [query, setQuery] = useState('');
-    //const [data, setData] = useState([]);
-   
-    //console.log((query))
 
-    //const navigate = useNavigate()
-      
-    //function handleSearch(e) {
-        //e.preventDefault()
-        //const fetchRecipes = async () => {
-            //const res =  await axios.get(`http://localhost:5000/?q=${query}`)
-            //setData(res.data);
-            
-        //};
-        //fetchRecipes()
-        //navigate(`/recipes/${query}`);
-    //}
 
 
                 headers: {
@@ -88,6 +71,25 @@ function Search() {
 }
 
 export default Search;
+
+//function Search () {
+    //const [query, setQuery] = useState('');
+    //const [data, setData] = useState([]);
+   
+    //console.log((query))
+
+    //const navigate = useNavigate()
+      
+    //function handleSearch(e) {
+        //e.preventDefault()
+        //const fetchRecipes = async () => {
+            //const res =  await axios.get(`http://localhost:5000/?q=${query}`)
+            //setData(res.data);
+            
+        //};
+        //fetchRecipes()
+        //navigate(`/recipes/${query}`);
+    //}
 
         //<div>
             

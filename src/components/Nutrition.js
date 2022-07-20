@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
+ 
+
 
 
 
@@ -27,7 +29,7 @@ function Nutrition() {
             const response = await fetch(
                 `https://api.calorieninjas.com/v1/nutrition?query=` + query,{
                 headers: {
-                  'X-Api-Key': '',
+                  'X-Api-Key': process.env.REACT_APP_API_KEY
                   
                 },
                 contentType: 'application/json',
@@ -39,7 +41,7 @@ function Nutrition() {
                 setCalories(resData)
             
         }
-    
+   
     console.log(calories)
     let types = typeof(calories)
     let arrays =calories.items;
