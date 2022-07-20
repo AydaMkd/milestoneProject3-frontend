@@ -1,4 +1,6 @@
+
 import { useState } from 'react'
+
 
 function Nutrition() {
 
@@ -21,6 +23,7 @@ function Nutrition() {
         // console.log(data.ingredients)
         //query= data.ingredients
         console.log(query)
+
         const response = await fetch(
             `https://api.calorieninjas.com/v1/nutrition?query=` + query, {
             headers: {
@@ -34,6 +37,7 @@ function Nutrition() {
 
         setCalories(resData)
     }
+
 
     console.log(calories)
     let types = typeof (calories)

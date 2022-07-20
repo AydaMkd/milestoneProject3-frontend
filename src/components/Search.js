@@ -10,24 +10,7 @@ function Search() {
         e.preventDefault()
         const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
 
-//function Search () {
-    //const [query, setQuery] = useState('');
-    //const [data, setData] = useState([]);
-   
-    //console.log((query))
 
-    //const navigate = useNavigate()
-      
-    //function handleSearch(e) {
-        //e.preventDefault()
-        //const fetchRecipes = async () => {
-            //const res =  await axios.get(`http://localhost:5000/?q=${query}`)
-            //setData(res.data);
-            
-        //};
-        //fetchRecipes()
-        //navigate(`/recipes/${query}`);
-    //}
 
             headers: {
                 'x-auth-token': localStorage.getItem('token'),
@@ -73,7 +56,9 @@ function Search() {
 }
 
 export default Search;
+
   
+
         //<div>
             
                 //<input type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query} />
