@@ -1,10 +1,6 @@
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { CurrentUser } from "../contexts/CurrentUser";
 import { Image } from "react-bootstrap";
@@ -49,7 +45,7 @@ function HeaderBar() {
 
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Image className="HangryLogo" src="./images/HangryLogo.jpeg" />
+        <Image className="HangryLogo" src="./images/HangryLogo2.jpeg" />
         <Navbar.Brand href="#">Hangry Nomster</Navbar.Brand>
         {loginActions}
         <Navbar.Toggle aria-controls="navbarScroll" />
