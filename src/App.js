@@ -12,6 +12,7 @@ import { BrowserRouter } from 'react-router-dom';
 import NewRecipe from './components/NewRecipe';
 import Recipes from './components/Recipes';
 import Profile from './components/Profile';
+import Edit from './components/Edit';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/new" element={<NewRecipe />} />
           {/* <Route path="/recipes" element={<Recipes />} /> */}
           {/* <Route path="/profile" element={<Profile />} /> */}
+          <Route path="/edit" element={<Edit />} />
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>

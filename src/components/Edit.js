@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import Card from 'react-bootstrap/Card';
 
 
-function NewRecipe() {
+function Edit() {
 
 	const navigate = useNavigate()
 
@@ -25,8 +25,8 @@ function NewRecipe() {
 	console.log(recipe)
 	async function handleSubmit(e) {
 		e.preventDefault()
-		const response = await fetch(`http://localhost:5000/api/recipes`, {
-			method: 'POST',
+		const response = await fetch(`http://localhost:5000/api/recipes/{id}`, {
+			method: 'Put',
 			headers: {
 				'x-auth-token': localStorage.getItem('token'),
 				'Content-Type': 'application/json'
@@ -156,7 +156,7 @@ function NewRecipe() {
 									/>
 								</div>
 							</div>
-							<input className="btn btn-primary" type="submit" value="Add Recipe" />
+							<input className="btn btn-primary" type="submit" value="Edit Recipe" />
 						</form>
 					</main>
 				</Card.Body>
@@ -165,4 +165,4 @@ function NewRecipe() {
 	)
 }
 
-export default NewRecipe
+export default Edit

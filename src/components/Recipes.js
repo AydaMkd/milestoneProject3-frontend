@@ -3,11 +3,15 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { Image } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router"
 
 function Recipes() {
-
+   
+    const { id } = useParams()
     const [recipes, setRecipes] = useState(null)
+    const [value, setValue]= useState(null)
     // const resData = null
+    const navigate = useNavigate()
 
     useEffect(() => {
         console.log('useEffect')
@@ -28,20 +32,40 @@ function Recipes() {
         fetchData()
     }, [])
     console.log(recipes)
-
+    console.log(value)
+    async function deleteRecipe() {
+      
+	 await fetch(`http://localhost:5000/api/recipes/${id}`, {
+			method: 'DELETE',
+            headers: {
+                'x-auth-token': localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+            },
+		})
+		navigate('/recipes')
+	}
     if (recipes === null) {
         return <h1>Loading</h1>
     }
-
+   function editRecipe(){
+    navigate("/edit")
+   }
+  
+   
     return (<>
 
         {recipes.map((recipe) => {
+        
             return (
+
                 <Container>
                     <Card>
-                        <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+                     
+                    <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
                             <Accordion.Item eventKey="0">
+                           
                                 <Accordion.Header>{recipe.recipename}</Accordion.Header>
+                                
                                 <Accordion.Body>
                                     <div class="container my-5">
                                         <div class="card row flex-row-reverse">
@@ -60,6 +84,17 @@ function Recipes() {
                                                 <p>{recipe.directions}</p>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div>
+                                   
+                                    <button type="submit" className="btn btn-danger" onClick={deleteRecipe}>
+						           Delete
+					            </button>
+                                
+                                <button type="submit" className="btn btn-danger" onClick={editRecipe}>
+						           Edit Recipe
+					            </button>
+                               
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

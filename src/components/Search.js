@@ -24,6 +24,8 @@ function Search() {
     
     console.log(menus)
     console.log(query)
+    
+    
     let display = (
         <>
          
@@ -40,6 +42,9 @@ function Search() {
       </li>
       <li >
       <img width="200" height="200" src={menu.image} />
+      </li>
+      <li >
+        {menu.preptime}
       </li>
       </ul>
     )
