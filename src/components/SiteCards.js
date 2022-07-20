@@ -35,9 +35,6 @@ function SiteCards() {
                                 <Nav.Link as={Link} to="/newRecipe">Add Recipe</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link as={Link} to="/search">Search For Recipes</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
                                 <Nav.Link as={Link} to="/value">Get recipe calories</Nav.Link>
                             </Nav.Item>
                         </Nav>
