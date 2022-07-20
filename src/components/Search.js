@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router'
-import axios from "axios";
+import { useState } from 'react'
 
 function Search() {
 
@@ -10,24 +8,20 @@ function Search() {
    
     async function handleSearch(e) {
         e.preventDefault()
-            const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
+        const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
 
 
 
-
-
-
-                headers: {
-                    'x-auth-token': localStorage.getItem('token'),
-                    'Content-Type': 'application/json'
+            headers: {
+                'x-auth-token': localStorage.getItem('token'),
+                'Content-Type': 'application/json'
                 },
-            })
-            const resData = await response.json()
-            // if data is the same, don't update
-           
-                setMenus(resData)
-            
-        }
+        })
+
+        const resData = await response.json()
+            // if data is the same, don't update 
+        setMenus(resData)      
+    }
     
     console.log(menus)
     console.log(query)
@@ -36,60 +30,34 @@ function Search() {
          
         </>
       );
-    if (menus.length > 0) {display = (
-   <>
-   <ul>
-  {menus.map(menu => {
-    return (
+        if (menus.length > 0) {display = (
+            <>
+   
+            {menus.map(menu => {
+                return (
+                    <div>
+                        <p>{menu.recipename}</p>
+                        <p><img width="200" height="200" src={menu.image} /></p>     
+                    </div>    
+                )
+            })}
 
-      <ul>
-      <li >
-        {menu.recipename}
-      </li>
-      <li >
-      <img width="200" height="200" src={menu.image} />
-      </li>
-      </ul>
-    )
-  })}
-</ul>
-
-   </>
-    )
-}
+            </>
+        )
+    }
 
     return (
-        <div>
-            
-                <input type="text" placeholder="Search recipes by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
-                <input type="submit" onClick={handleSearch} />
-               
+        <div>       
+            <input type="text" placeholder="Search recipes by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
+            <input type="submit" onClick={handleSearch} />         
          {display}
-        </div>
-       
+        </div>  
     )
 }
 
 export default Search;
 
-//function Search () {
-    //const [query, setQuery] = useState('');
-    //const [data, setData] = useState([]);
-   
-    //console.log((query))
-
-    //const navigate = useNavigate()
-      
-    //function handleSearch(e) {
-        //e.preventDefault()
-        //const fetchRecipes = async () => {
-            //const res =  await axios.get(`http://localhost:5000/?q=${query}`)
-            //setData(res.data);
-            
-        //};
-        //fetchRecipes()
-        //navigate(`/recipes/${query}`);
-    //}
+  
 
         //<div>
             
@@ -125,5 +93,3 @@ export default Search;
 //   />
 // </Form>
 // </Navbar.Collapse> */}
-
-
