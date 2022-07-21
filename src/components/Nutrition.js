@@ -82,7 +82,7 @@ function Nutrition() {
     }
 
     return (
-        <div>
+        <div className="text-center">
             <input type="text" placeholder="Search for calories" onChange={(e) => setQuery(e.target.value)} value={query} />
             <input type="submit" onClick={handleSearch} />
             <span>

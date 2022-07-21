@@ -14,7 +14,7 @@ const About = () => {
                             We created this app to find and share recipes. This is our
                         </h3>
                         <h3>
-                            final Milestone project for a software developement bootcamp.
+                            final Milestone project for a software development bootcamp.
                         </h3>
                         <h3>
                             We hope you enjoy it!
