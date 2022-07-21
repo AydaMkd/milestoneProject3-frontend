@@ -33,10 +33,12 @@ function NewRecipe() {
 		})
 		const data = await response.json()
 		console.log(data)
-		navigate('/recipes')}
+		navigate('/recipes')
 	}
-  
+
+
 	return (
+
 		<Container>
 			<Card>
 				<Card.Body>
