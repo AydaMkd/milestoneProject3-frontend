@@ -13,6 +13,7 @@ import NewRecipe from './components/NewRecipe';
 import Recipes from './components/Recipes';
 import Profile from './components/Profile';
 import Edit from './components/Edit';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           {/* <Route path="/recipes" element={<Recipes />} /> */}
           {/* <Route path="/profile" element={<Profile />} /> */}
           <Route path="/edit" element={<Edit />} />
+          {/* <Route path="/search" element={<Search />} /> */}
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>

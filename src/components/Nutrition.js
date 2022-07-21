@@ -26,21 +26,18 @@ function Nutrition() {
         // console.log(data.ingredients)
         //query= data.ingredients
         console.log(query)
-            const response = await fetch(
-                `https://api.calorieninjas.com/v1/nutrition?query=` + query,{
+    const response = await fetch(
+        'https://api.calorieninjas.com/v1/nutrition?query=' + query, {
+
                 headers: {
-                  'X-Api-Key': process.env.REACT_APP_API_KEY
-                  
+                    'X-Api-Key': process.env.REACT_APP_API_KEY,
+                    'Content-Type': 'application/json'
                 },
-                contentType: 'application/json',
-            }
-              );
-            const resData = await response.json()
-            // if data is the same, don't update
-           
-                setCalories(resData)
-            
-        }
+            })
+        const resData = await response.json()
+        // if data is the same, don't update
+        setCalories(resData)
+    }
    
     console.log(calories)
     let types = typeof(calories)
