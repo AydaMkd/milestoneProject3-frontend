@@ -133,17 +133,7 @@ function NewRecipe() {
 										name="directions"
 									/>
 								</div>
-								<div className="form-group">
-									<label htmlFor="steps">Steps</label>
-									<input
-										required
-										value={recipe.steps}
-										onChange={e => setRecipe({ ...recipe, steps: e.target.value })}
-										className="form-control"
-										id="steps"
-										name="steps"
-									/>
-								</div>
+								
 								<div className="form-group">
 									<label htmlFor="description">Description</label>
 									<input
