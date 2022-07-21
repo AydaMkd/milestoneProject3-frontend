@@ -89,14 +89,14 @@ function Recipes() {
                                         </div>
                                     </div>
                                     <div>
-                                   
+                                    <button type="submit" className="" onClick={editRecipe}>
+						           Edit Recipe
+					            </button>
                                     <button type="submit" className="btn btn-danger" onClick={deleteRecipe}>
 						           Delete
 					            </button>
-                                
-                                <button type="submit" className="btn btn-danger" onClick={editRecipe}>
-						           Edit Recipe
-					            </button>
+                               
+                               
                                
                                     </div>
                                 </Accordion.Body>
