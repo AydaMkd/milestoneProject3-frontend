@@ -8,7 +8,7 @@ import NewRecipe from './NewRecipe';
 import { useContext } from "react";
 import { CurrentUser } from '../contexts/CurrentUser';
 import Search from './Search';
-import Nutrition from './Nutrition';
+
 
 
 
@@ -37,9 +37,7 @@ function SiteCards() {
                             <Nav.Item>
                                 <Nav.Link as={Link} to="/search">Search For Recipes</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link as={Link} to="/value">Get recipe calories</Nav.Link>
-                            </Nav.Item>
+                           
                         </Nav>
                     </Card.Header>
                 </Card>
@@ -50,7 +48,7 @@ function SiteCards() {
                         <Route path="/profile" element={<Profile />} />
                         <Route path="/newRecipe" element={<NewRecipe />} />
                         <Route path="/search" element={<Search />} />
-                        <Route path="/value" element={<Nutrition />} />
+                       
                     </Routes>
                 </div></>
         );
