@@ -132,10 +132,10 @@ function Profile() {
                                                     <ul>
                                                         <li><b>Cuisine:</b> {myrecipe.cuisines}</li>
                                                         <li><b>Difficulty</b> {myrecipe.difficulty}</li>
+                                                        <li><b>Ingredients:</b> {myrecipe.ingredients}</li>
                                                         <li><b>Prep Time:</b> {myrecipe.preptime}</li>
                                                         <li><b>Cook Time:</b> {myrecipe.cooktime}</li>
-                                                        <li><b>Ingredients:</b> {myrecipe.ingredients}</li>
-                                                        <li><b>Steps:</b> {myrecipe.steps}{myrecipe.directions}</li>
+                                                         <li><b>Directions:</b> {myrecipe.steps}{myrecipe.directions}</li>
                                                     </ul>
                                                 </p>                                                
                                                 <Button onClick={onRecipeEdit} data-id={myrecipe._id}>Edit Recipe</Button>

@@ -59,9 +59,10 @@ function Recipes() {
                                                     <ul>
                                                         <li><b>Cuisine:</b> {recipe.cuisines}</li>
                                                         <li><b>Difficulty</b> {recipe.difficulty}</li>
+                                                        <li><b>Ingredients:</b> {recipe.ingredients}</li>
                                                         <li><b>Prep Time:</b> {recipe.preptime}</li>
                                                         <li><b>Cook Time:</b> {recipe.cooktime}</li>
-                                                        <li><b>Ingredients:</b> {recipe.ingredients}</li>
+                                                        
                                                         <li><b>Directions: </b> {recipe.directions}</li>
                                                     </ul>
                                                 </p>
