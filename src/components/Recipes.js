@@ -33,6 +33,7 @@ function Recipes() {
         return <h1>Loading</h1>
     }
 
+<<<<<<< HEAD
     return (
         <>
             <h1 className="text-center">Recipes</h1>
@@ -62,6 +63,47 @@ function Recipes() {
                                                         </ul>
                                                     </p>
                                                 </div>
+=======
+   function editRecipe(){
+    navigate("/edit")
+   }
+  
+   
+    return (<>
+    <h1 className="text-center">Recipes</h1>
+		<div className="text-center">
+			<Search />
+		</div>
+        {recipes.map((recipe) => {
+        
+            return (
+
+                <Container>
+                    <Card>
+                     
+                    <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+                            <Accordion.Item eventKey="0">
+                           
+                                <Accordion.Header>{recipe.recipename}</Accordion.Header>
+                                
+                                <Accordion.Body>
+                                    <div class="container my-5">
+                                        <div class="card row flex-row-reverse">
+                                            <img class="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
+                                            <div class="col-lg-8 card-body">
+                                                <h4 class="card-title">{recipe.description}</h4>
+                                                <p class="card-text">
+                                                    <ul>
+                                                        <li><b>Cuisine:</b> {recipe.cuisines}</li>
+                                                        <li><b>Difficulty</b> {recipe.difficulty}</li>
+                                                        <li><b>Prep Time:</b> {recipe.preptime}</li>
+                                                        <li><b>Cook Time:</b> {recipe.cooktime}</li>
+                                                        <li><b>Ingredients:</b> {recipe.ingredients}</li>
+                                                        <li><b>Steps:</b> {recipe.steps}</li>
+                                                    </ul>
+                                                </p>
+                                                <p>{recipe.directions}</p>
+>>>>>>> main
                                             </div>
                                         </div>
                                     </Accordion.Body>

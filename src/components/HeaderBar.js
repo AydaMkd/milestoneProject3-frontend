@@ -4,6 +4,9 @@ import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { CurrentUser } from "../contexts/CurrentUser";
 import { Image } from "react-bootstrap";
+import Button from "react-bootstrap/Button"
+
+
 
 function HeaderBar() {
   const navigate = useNavigate();
@@ -18,16 +21,13 @@ function HeaderBar() {
   // this collection of html should be inside of an unordered/ordered list
   let loginActions = (
     <>
-      <li>
-        <a href="#" onClick={() => navigate("/sign-up")}>
-          Sign Up
-        </a>
-      </li>
-      <li>
-        <a href="#" onClick={() => navigate("/login")}>
-          Login
-        </a>
-      </li>
+    <div>
+      <button className="signup" href="#" onClick={() => navigate("/sign-up")}>Sign Up</button>
+    </div>
+      
+    <div>
+      <button className="login" href="#" onClick={() => navigate("/login")}>Login</button>
+    </div>
     </>
   );
 
@@ -48,7 +48,6 @@ function HeaderBar() {
         <Image className="HangryLogo" src="./images/HangryLogo2.jpeg" />
         <Navbar.Brand className="text-wrap"><b>"EAT WHATEVER YOU WANT, AND IF ANYONE TRIES TO LECTURE YOU ABOUT YOUR WEIGHT, EAT THEM TOO"</b></Navbar.Brand>
         {loginActions}
-        <Navbar.Toggle aria-controls="navbarScroll" />
       </Container>
     </Navbar>
   );

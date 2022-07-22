@@ -73,7 +73,12 @@ function Search() {
                     return (
                         <div>
                             <Container>
+<<<<<<< HEAD
                                 <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
+=======
+
+                            <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
+>>>>>>> main
                                     <Accordion defaultActiveKey={new Date(menu.date).getUTCMilliseconds()}>
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>{menu.recipename}</Accordion.Header>

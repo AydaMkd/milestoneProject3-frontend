@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
+import background from "../backgroundImages/colorfulpeppers.png"
+
+
 function SignUpForm() {
 
 	const navigate = useNavigate();
@@ -26,7 +29,15 @@ function SignUpForm() {
 
 	return (
 		<main>
+			<div className="signupimg">
+			<div className="box">
+			
+			
+			
+			</div>
+			</div>
 			<h1>Sign Up</h1>
+			
 			<form onSubmit={handleSubmit}>
 				<div className="row">
 					<div className="col-sm-6 form-group">
@@ -67,8 +78,10 @@ function SignUpForm() {
 						/>
 					</div>
 				</div>
-				<input className="btn btn-primary" type="submit" value="Sign Up" />
+				<input className="signupbtn" type="submit" value="Sign Up" />
 			</form>
+			Photo by <a href="https://unsplash.com/@srz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">sydney Rae</a> on <a href="https://unsplash.com/s/photos/grocerys?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+			
 		</main>
 	)
 }
