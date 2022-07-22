@@ -1,13 +1,17 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
 import Edit from "./Edit";
 import Modal from 'react-bootstrap/Modal';
+<<<<<<< HEAD
 
 const baseUrl = 'http://localhost:5000/';
+=======
+>>>>>>> 49abec3fae7dd4b1af064b9dd3015d4f73cf2872
 
+const baseUrl = 'http://localhost:5000/';
 function Profile() {
 
     const [myrecipes, setMyrecipes] = useState(null)
@@ -16,9 +20,8 @@ function Profile() {
     // const resData = null
 
     useEffect(() => {
-        console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/api/recipes/myrecipes`, {
+            const response = await fetch(`${baseUrl}api/recipes/myrecipes`, {
 
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),
@@ -61,7 +64,11 @@ function Profile() {
     const onSubmitCompleted = (recipe) => {
         let index = -1;
         const newRecipe = [...myrecipes];
+<<<<<<< HEAD
         newRecipe.find((k, i) => { if (k._id === recipe._id) { index = i; } })
+=======
+        newRecipe.find((k, i) => { if (k._id === recipe._id) { index = i; }})
+>>>>>>> 49abec3fae7dd4b1af064b9dd3015d4f73cf2872
         newRecipe[index] = recipe;
         setMyrecipes(newRecipe);
         onModalClose();
@@ -113,6 +120,47 @@ function Profile() {
     }
 
 
+    const onRecipeDelete = (e) => {
+        const { currentTarget } = e;
+        if (currentTarget) {
+            const recipeId = currentTarget.getAttribute('data-id');
+            if (recipeId) {
+                fetch(`${baseUrl}api/recipes/myrecipes/${recipeId}`, {
+                    method: 'DELETE', headers: {
+                        'x-auth-token': localStorage.getItem('token'),
+                        'Content-Type': 'application/json'
+                    },
+                }).then((response) => {
+                    if (response.status === 200) {
+                        // creates a new array 
+                        const newRecipes = [...myrecipes];
+                        let index = getRecipeIndexById(recipeId, newRecipes);
+                        // delete the recipe by index
+                        delete newRecipes[index];
+                        // update state so a re-render will occur
+                        setMyrecipes(newRecipes);
+                    }
+                });
+            }
+        }
+    }
+
+    const onRecipeEdit = (e) => {
+        const { currentTarget } = e;
+        if (currentTarget) {
+            const id = currentTarget.getAttribute('data-id');
+            if (id) {
+                setRecipeToEdit(id);
+                setShowEditModal(true);
+            }
+        }
+    }
+
+    const onModalClose = () => {
+        setRecipeToEdit('');
+        setShowEditModal(false);
+    }
+
     return (<>
         <h1 className="text-center">My Recipes</h1>
         {myrecipes.map((myrecipe) => {
@@ -137,7 +185,12 @@ function Profile() {
                                                         <li><b>Ingredients:</b> {myrecipe.ingredients}</li>
                                                         <li><b>Steps:</b> {myrecipe.steps}{myrecipe.directions}</li>
                                                     </ul>
+<<<<<<< HEAD
                                                 </p>                                                
+=======
+                                                </p>
+                                                <p>{myrecipe.directions}</p>
+>>>>>>> 49abec3fae7dd4b1af064b9dd3015d4f73cf2872
                                                 <Button onClick={onRecipeEdit} data-id={myrecipe._id}>Edit Recipe</Button>
                                                 <br></br>
                                                 <Button onClick={onRecipeDelete} data-id={myrecipe._id}>Delete Recipe</Button>

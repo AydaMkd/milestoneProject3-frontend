@@ -9,6 +9,12 @@ function Edit(props) {
 	const navigate = useNavigate()
 	const [recipe, setRecipe] = useState(props.recipe)
 
+<<<<<<< HEAD
+=======
+
+	const [recipe, setRecipe] = useState(props.recipe);
+
+>>>>>>> 49abec3fae7dd4b1af064b9dd3015d4f73cf2872
 	async function handleSubmit(e) {
 		e.preventDefault()
 		const response = await fetch(`http://localhost:5000/api/recipes/myrecipes/${recipe._id}/${recipe.user}`, {
@@ -24,7 +30,10 @@ function Edit(props) {
 		props.onSubmitCompleted(recipe);
 		setRecipe(null);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 49abec3fae7dd4b1af064b9dd3015d4f73cf2872
 
 	return (
 		<Container>
