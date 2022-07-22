@@ -14,7 +14,7 @@ function Search() {
 
     async function handleSearch(e) {
         e.preventDefault()
-        const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
+        const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/search/${query}`, {
 
 
 
@@ -113,7 +113,7 @@ function Search() {
     return (
         <div className="text-center">
             <input type="submit" value="Search" onClick={handleSearch} />
-            <input type="text" placeholder="        by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
+            <input type="text" placeholder="        by recipe name" onChange={(e) => setQuery(e.target.value)} value={query} />
             {display}
             <br></br>
         </div>

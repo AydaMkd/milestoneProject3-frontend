@@ -14,7 +14,7 @@ function NewComment() {
 	console.log(recipe)
 	async function handleSubmit(e) {
 		e.preventDefault()
-		const response = await fetch(`http://localhost:5000/api/recipes/comment`, {
+		const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/comment`, {
 			method: 'POST',
 			headers: {
 				'x-auth-token': localStorage.getItem('token'),

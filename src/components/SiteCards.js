@@ -39,7 +39,7 @@ function SiteCards() {
                                 <Nav.Link as={Link} to="/newRecipe">Add Recipe</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link as={Link} to="/nutrition">Get Recipe Calories</Nav.Link>
+                                <Nav.Link as={Link} to="/nutrition">Get Nutritious Value</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Card.Header>
