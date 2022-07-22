@@ -72,13 +72,13 @@ function Search() {
                 {menus.map(menu => {
                     return (
                         <div>
-
-                            {/* <p>{menu.recipename}</p>
-                            <p><img width="200" height="200" src={menu.image} /></p>
-                            <p>{menu.preptime}</p> */}
                             <Container>
+<<<<<<< HEAD
+                                <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
+=======
 
                             <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
+>>>>>>> main
                                     <Accordion defaultActiveKey={new Date(menu.date).getUTCMilliseconds()}>
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>{menu.recipename}</Accordion.Header>
