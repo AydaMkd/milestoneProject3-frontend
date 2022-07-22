@@ -81,6 +81,7 @@ function Recipes() {
                                                 <p class="card-text">
                                                     <ul>
                                                         <li><b>Cuisine:</b> {recipe.cuisines}</li>
+                                                        <li><b>Difficulty</b> {recipe.difficulty}</li>
                                                         <li><b>Prep Time:</b> {recipe.preptime}</li>
                                                         <li><b>Cook Time:</b> {recipe.cooktime}</li>
                                                         <li><b>Ingredients:</b> {recipe.ingredients}</li>
