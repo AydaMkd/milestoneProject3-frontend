@@ -78,7 +78,7 @@ function LoginForm() {
                         />
                     </div>
                 </div>
-                <input className="btn btn-primary" type="submit" value="Login" />
+                <input className="loginbtn" type="submit" value="Login" />
             </form>
         </main>
     )
