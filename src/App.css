@@ -21,3 +21,24 @@
   background-color: rgb(252, 207, 60);
   font-size: 15em black;
 }
+
+.login {
+  background-color: rgb(237, 124, 26);
+  color: white;
+  border-color: rgb(237, 124, 26);
+  text-align: center;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  margin: 5px;
+}
+.signup {
+  background-color: rgb(252, 157, 40);
+  color: white;
+  border-color: rgb(252, 157, 40);
+  text-align: center;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  margin: 5px;
+}
