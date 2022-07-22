@@ -67,18 +67,11 @@ function Search() {
     if (menus.length > 0) {
         display = (
             <>
-
-
                 {menus.map(menu => {
                     return (
                         <div>
                             <Container>
-<<<<<<< HEAD
-                                <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
-=======
-
                             <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
->>>>>>> main
                                     <Accordion defaultActiveKey={new Date(menu.date).getUTCMilliseconds()}>
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>{menu.recipename}</Accordion.Header>
@@ -118,7 +111,7 @@ function Search() {
     }
 
     return (
-        <div>
+        <div className="text-center">
             <input type="submit" value="Search" onClick={handleSearch} />
             <input type="text" placeholder="        by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
             {display}
