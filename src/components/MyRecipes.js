@@ -140,7 +140,7 @@ function Profile() {
                                                 </p>                                                
                                                 <Button onClick={onRecipeEdit} data-id={myrecipe._id}>Edit Recipe</Button>
                                                 <br></br>
-                                                <Button onClick={onRecipeDelete} data-id={myrecipe._id}>Delete Recipe</Button>
+                                                <Button className="btn btn-danger" onClick={onRecipeDelete} data-id={myrecipe._id}>Delete Recipe</Button>
                                             </div>
                                         </div>
                                     </div>
