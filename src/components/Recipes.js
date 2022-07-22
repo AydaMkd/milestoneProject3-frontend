@@ -56,7 +56,10 @@ function Recipes() {
   
    
     return (<>
-
+    <h1 className="text-center">Recipes</h1>
+		<div className="text-center">
+			<Search />
+		</div>
         {recipes.map((recipe) => {
         
             return (
