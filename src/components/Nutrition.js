@@ -102,7 +102,7 @@ function Nutrition() {
     return (
         <div className="text-center">
         <span>
-            <h3>Enter ingredient or recipe name to search for average nutritious value </h3>
+            <h3>Enter ingredient or recipe name to search for their nutritious value </h3>
         </span>
             <input type="text" placeholder="Enter search" onChange={(e) => setQuery(e.target.value)} value={query} />
             <input type="submit" onClick={handleSearch} />
