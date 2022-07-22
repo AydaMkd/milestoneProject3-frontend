@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
@@ -7,6 +7,7 @@ import Edit from "./Edit";
 import Modal from 'react-bootstrap/Modal';
 
 const baseUrl = 'http://localhost:5000/';
+
 function Profile() {
 
     const [myrecipes, setMyrecipes] = useState(null)
@@ -15,8 +16,9 @@ function Profile() {
     // const resData = null
 
     useEffect(() => {
+        console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`${baseUrl}api/recipes/myrecipes`, {
+            const response = await fetch(`http://localhost:5000/api/recipes/myrecipes`, {
 
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),
@@ -59,7 +61,7 @@ function Profile() {
     const onSubmitCompleted = (recipe) => {
         let index = -1;
         const newRecipe = [...myrecipes];
-        newRecipe.find((k, i) => { if (k._id === recipe._id) { index = i; }})
+        newRecipe.find((k, i) => { if (k._id === recipe._id) { index = i; } })
         newRecipe[index] = recipe;
         setMyrecipes(newRecipe);
         onModalClose();
@@ -69,7 +71,6 @@ function Profile() {
     if (myrecipes === null) {
         return <h1>Loading</h1>
     }
-
     const onRecipeDelete = (e) => {
         const { currentTarget } = e;
         if (currentTarget) {
@@ -111,6 +112,7 @@ function Profile() {
         setShowEditModal(false);
     }
 
+
     return (<>
         <h1 className="text-center">My Recipes</h1>
         {myrecipes.map((myrecipe) => {
@@ -133,10 +135,9 @@ function Profile() {
                                                         <li><b>Prep Time:</b> {myrecipe.preptime}</li>
                                                         <li><b>Cook Time:</b> {myrecipe.cooktime}</li>
                                                         <li><b>Ingredients:</b> {myrecipe.ingredients}</li>
-                                                        <li><b>Steps:</b> {myrecipe.steps}</li>
+                                                        <li><b>Steps:</b> {myrecipe.steps}{myrecipe.directions}</li>
                                                     </ul>
-                                                </p>
-                                                <p>{myrecipe.directions}</p>
+                                                </p>                                                
                                                 <Button onClick={onRecipeEdit} data-id={myrecipe._id}>Edit Recipe</Button>
                                                 <br></br>
                                                 <Button onClick={onRecipeDelete} data-id={myrecipe._id}>Delete Recipe</Button>

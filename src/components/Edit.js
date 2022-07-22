@@ -8,9 +8,7 @@ function Edit(props) {
 
 	const navigate = useNavigate()
 
-
 	const [recipe, setRecipe] = useState(props.recipe);
-
 	async function handleSubmit(e) {
 		e.preventDefault()
 		const response = await fetch(`http://localhost:5000/api/recipes/myrecipes/${recipe._id}/${recipe.user}`, {
@@ -27,7 +25,6 @@ function Edit(props) {
 		setRecipe(null);
 	}
 
-	
 	return (
 		<Container>
 			<Card className="text-center">
@@ -142,4 +139,4 @@ function Edit(props) {
 	)
 }
 
-export default Edit
+export default Edit;

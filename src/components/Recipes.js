@@ -3,9 +3,12 @@ import Search from "./Search";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
+import { Image } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router"
 
 function Recipes() {
 
+    const { id } = useParams()
     const [recipes, setRecipes] = useState(null)
     // const resData = null
 
@@ -33,59 +36,19 @@ function Recipes() {
         return <h1>Loading</h1>
     }
 
-<<<<<<< HEAD
-    return (
-        <>
-            <h1 className="text-center">Recipes</h1>
-            <div className="text-center">
-                <Search />
-            </div>
-            {recipes.map((recipe) => {
-                return (
-                    <Container>
-                        <Card>
-                            <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
-                                <Accordion.Item eventKey="0">
-                                    <Accordion.Header>{recipe.recipename}</Accordion.Header>
-                                    <Accordion.Body>
-                                        <div class="container my-5">
-                                            <div class="card row flex-row-reverse">
-                                                <img class="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
-                                                <div class="col-lg-8 card-body">
-                                                    <h4 class="card-title">{recipe.description}</h4>
-                                                    <p class="card-text">
-                                                        <ul>
-                                                            <li><b>Cuisine:</b> {recipe.cuisines}</li>
-                                                            <li><b>Prep Time:</b> {recipe.preptime}</li>
-                                                            <li><b>Cook Time:</b> {recipe.cooktime}</li>
-                                                            <li><b>Ingredients:</b> {recipe.ingredients}</li>
-                                                            <li><b>Directions: </b> {recipe.directions}</li>
-                                                        </ul>
-                                                    </p>
-                                                </div>
-=======
-   function editRecipe(){
-    navigate("/edit")
-   }
-  
-   
     return (<>
-    <h1 className="text-center">Recipes</h1>
-		<div className="text-center">
-			<Search />
-		</div>
+        <h1 className="text-center">Recipes</h1>
+        <div>
+            <Search />
+        </div>
         {recipes.map((recipe) => {
-        
-            return (
 
+            return (
                 <Container>
                     <Card>
-                     
-                    <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+                        <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
                             <Accordion.Item eventKey="0">
-                           
                                 <Accordion.Header>{recipe.recipename}</Accordion.Header>
-                                
                                 <Accordion.Body>
                                     <div class="container my-5">
                                         <div class="card row flex-row-reverse">
@@ -99,20 +62,20 @@ function Recipes() {
                                                         <li><b>Prep Time:</b> {recipe.preptime}</li>
                                                         <li><b>Cook Time:</b> {recipe.cooktime}</li>
                                                         <li><b>Ingredients:</b> {recipe.ingredients}</li>
-                                                        <li><b>Steps:</b> {recipe.steps}</li>
+                                                        <li><b>Directions: </b> {recipe.directions}</li>
                                                     </ul>
                                                 </p>
-                                                <p>{recipe.directions}</p>
->>>>>>> main
                                             </div>
                                         </div>
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                            </Accordion>
-                        </Card>
-                    </Container>
-                )
-            })
-            }</>)
+                                    </div>                                    
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                    </Card>
+                </Container>
+            )
+        })
+        }</>)
 }
+
 export default Recipes;
