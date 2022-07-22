@@ -15,9 +15,6 @@ function Search() {
     async function handleSearch(e) {
         e.preventDefault()
         const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
-
-
-
             headers: {
                 'x-auth-token': localStorage.getItem('token'),
                 'Content-Type': 'application/json'
@@ -29,8 +26,6 @@ function Search() {
 
         setMenus(resData)
         //navigate(`/search/${query}`)
-
-
     }
 
     console.log(menus)
@@ -41,44 +36,15 @@ function Search() {
         <>
 
         </>
-
-        /*      );
-            if (menus.length > 0) {display = (
-           <>
-           <ul>
-          {menus.map(menu => {
-            return (
-              <ul>
-              <li >
-                {menu.recipename}
-              </li>
-              <li >
-              <img width="200" height="200" src={menu.image} />
-              </li>
-              <li >
-                {menu.preptime}
-              </li>
-              </ul>
-            )
-          })}
-        </ul> */
-
     );
     if (menus.length > 0) {
         display = (
             <>
-
-
                 {menus.map(menu => {
                     return (
                         <div>
-
-                            {/* <p>{menu.recipename}</p>
-                            <p><img width="200" height="200" src={menu.image} /></p>
-                            <p>{menu.preptime}</p> */}
                             <Container>
-
-                            <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
+                                <Card style={{ border: '5px solid rgb(252, 207, 60)' }} >
                                     <Accordion defaultActiveKey={new Date(menu.date).getUTCMilliseconds()}>
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>{menu.recipename}</Accordion.Header>
@@ -91,6 +57,7 @@ function Search() {
                                                             <p class="card-text">
                                                                 <ul>
                                                                     <li><b>Cuisine:</b> {menu.cuisines}</li>
+                                                                    <li><b>Difficulty</b> {menu.difficulty}</li>
                                                                     <li><b>Prep Time:</b> {menu.preptime}</li>
                                                                     <li><b>Cook Time:</b> {menu.cooktime}</li>
                                                                     <li><b>Ingredients:</b> {menu.ingredients}</li>
@@ -105,16 +72,11 @@ function Search() {
                                     </Accordion>
                                 </Card>
                             </Container>
-
                         </div>
-
                     )
                 })}
-
-
             </>
         )
-
     }
 
     return (
