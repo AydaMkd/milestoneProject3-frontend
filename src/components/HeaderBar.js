@@ -48,7 +48,6 @@ function HeaderBar() {
         <Image className="HangryLogo" src="./images/HangryLogo2.jpeg" />
         <Navbar.Brand className="text-wrap"><b>"EAT WHATEVER YOU WANT, AND IF ANYONE TRIES TO LECTURE YOU ABOUT YOUR WEIGHT, EAT THEM TOO"</b></Navbar.Brand>
         {loginActions}
-        <Navbar.Toggle aria-controls="navbarScroll" />
       </Container>
     </Navbar>
   );

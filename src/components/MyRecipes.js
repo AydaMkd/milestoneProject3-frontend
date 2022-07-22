@@ -52,6 +52,7 @@ function Profile() {
                                                 <p class="card-text">
                                                     <ul>
                                                         <li><b>Cuisine:</b> {myrecipe.cuisines}</li>
+                                                        <li><b>Difficulty</b> {myrecipe.difficulty}</li>
                                                         <li><b>Prep Time:</b> {myrecipe.preptime}</li>
                                                         <li><b>Cook Time:</b> {myrecipe.cooktime}</li>
                                                         <li><b>Ingredients:</b> {myrecipe.ingredients}</li>
