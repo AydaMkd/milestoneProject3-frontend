@@ -4,6 +4,9 @@ import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { CurrentUser } from "../contexts/CurrentUser";
 import { Image } from "react-bootstrap";
+import Button from "react-bootstrap/Button"
+
+
 
 function HeaderBar() {
   const navigate = useNavigate();
@@ -18,16 +21,13 @@ function HeaderBar() {
   // this collection of html should be inside of an unordered/ordered list
   let loginActions = (
     <>
-      <li>
-        <a href="#" onClick={() => navigate("/sign-up")}>
-          Sign Up
-        </a>
-      </li>
-      <li>
-        <a href="#" onClick={() => navigate("/login")}>
-          Login
-        </a>
-      </li>
+    <div>
+      <button className="signup" href="#" onClick={() => navigate("/sign-up")}>Sign Up</button>
+    </div>
+      
+    <div>
+      <button className="login" href="#" onClick={() => navigate("/login")}>Login</button>
+    </div>
     </>
   );
 
