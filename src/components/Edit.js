@@ -4,29 +4,17 @@ import { useNavigate } from "react-router";
 import Card from 'react-bootstrap/Card';
 
 
-function Edit() {
+function Edit(props) {
 
 	const navigate = useNavigate()
 
 
-	const [recipe, setRecipe] = useState({
-		recipename: '',
-		image: '',
-		cuisines: '',
-		difficulty: '',
-		preptime: '',
-		cooktime: '',
-		ingredients: '',
-		directions: '',
-		steps: '',
-		description: ''
-	})
+	const [recipe, setRecipe] = useState(props.recipe);
 
-	console.log(recipe)
 	async function handleSubmit(e) {
 		e.preventDefault()
-		const response = await fetch(`http://localhost:5000/api/recipes/{id}`, {
-			method: 'Put',
+		const response = await fetch(`http://localhost:5000/api/recipes/myrecipes/${recipe._id}/${recipe.user}`, {
+			method: 'PUT',
 			headers: {
 				'x-auth-token': localStorage.getItem('token'),
 				'Content-Type': 'application/json'
@@ -35,16 +23,16 @@ function Edit() {
 			body: JSON.stringify(recipe)
 		})
 		const data = await response.json()
-		console.log(data)
-		navigate('/recipes')}
+		props.onSubmitCompleted(recipe);
+		setRecipe(null);
+	}
 
 	
 	return (
 		<Container>
-			<Card>
+			<Card className="text-center">
 				<Card.Body>
 					<main>
-						<h1>Add a New Recipe</h1>
 						<form onSubmit={handleSubmit}>
 							<div className="form-group">
 								<label htmlFor="recipename">Recipe Name</label>
@@ -134,17 +122,6 @@ function Edit() {
 									/>
 								</div>
 								<div className="form-group">
-									<label htmlFor="steps">Steps</label>
-									<input
-										required
-										value={recipe.steps}
-										onChange={e => setRecipe({ ...recipe, steps: e.target.value })}
-										className="form-control"
-										id="steps"
-										name="steps"
-									/>
-								</div>
-								<div className="form-group">
 									<label htmlFor="description">Description</label>
 									<input
 										required
@@ -156,7 +133,7 @@ function Edit() {
 									/>
 								</div>
 							</div>
-							<input className="btn btn-primary" type="submit" value="Edit Recipe" />
+							<input className="btn btn-primary" type="submit" value="Save Recipe" />
 						</form>
 					</main>
 				</Card.Body>
