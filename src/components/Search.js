@@ -78,7 +78,7 @@ function Search() {
                             <p>{menu.preptime}</p> */}
                             <Container>
 
-                                <Card>
+                            <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
                                     <Accordion defaultActiveKey={new Date(menu.date).getUTCMilliseconds()}>
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>{menu.recipename}</Accordion.Header>
