@@ -79,7 +79,7 @@ function Nutrition() {
 
             console.log(sum2)
 
-            return String("Total number of calories for a serving of " + item + " is " + sum1 +".\nServing size is " + sum2 + " oz.\n More nutritious values: Carbohydrates_total_oz: " +item1+". Cholesterol_oz: "+item2 +" .Fat_saturated_oz: " +item3 +" .Fat_total_oz: "+item4 +"  .Fiber_oz: " +item5+"  .potassium_oz: " +item6 +" .protein_g: " +item7+" .Sodium_oz: "+item8+"  .Sugar_oz: "+item9)
+            return String("Total number of calories for a serving of " + item + " is " + sum1 +".\nServing size is " + sum2 + " oz.\n More nutritious values: Carbohydrates_total_oz: " +item1+". Cholesterol_oz: "+item2 +" .Fat_saturated_oz: " +item3 +" .Fat_total_oz: "+item4 +"  .Fiber_oz: " +item5+"  .Potassium_oz: " +item6 +" .protein_g: " +item7+" .Sodium_oz: "+item8+"  .Sugar_oz: "+item9)
         }
     }
 
