@@ -84,6 +84,7 @@ function Search() {
                                                             <p class="card-text">
                                                                 <ul>
                                                                     <li><b>Cuisine:</b> {menu.cuisines}</li>
+                                                                    <li><b>Difficulty</b> {menu.difficulty}</li>
                                                                     <li><b>Prep Time:</b> {menu.preptime}</li>
                                                                     <li><b>Cook Time:</b> {menu.cooktime}</li>
                                                                     <li><b>Ingredients:</b> {menu.ingredients}</li>
