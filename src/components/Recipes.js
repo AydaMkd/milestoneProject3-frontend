@@ -14,7 +14,7 @@ function Recipes() {
     useEffect(() => {
         console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`https://hangrynomster.herokuapp.com//api/recipes/`, {
+            const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/`, {
 
                 headers: {
                     //'x-auth-token': localStorage.getItem('token'),

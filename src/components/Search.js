@@ -14,7 +14,7 @@ function Search() {
 
     async function handleSearch(e) {
         e.preventDefault()
-        const response = await fetch(`https://hangrynomster.herokuapp.com//api/recipes/search/${query}`, {
+        const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/search/${query}`, {
         // const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
 
 
