@@ -33,10 +33,13 @@ function HeaderBar() {
 
   if (currentUser) {
     loginActions = (
-      <ul>
-        <li>Logged in as {currentUser.username}</li>
-        <button onClick={logout}>Logout</button>
-      </ul>
+      <>
+     
+        <div>
+        <button className="login" onClick={logout}>Logout</button>
+        <h6>Logged in as {currentUser.username}</h6>
+        </div>
+        </>
     );
   }
   // console.log(currentUser)
@@ -46,6 +49,7 @@ function HeaderBar() {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Image className="HangryLogo" src="./images/HangryLogo2.jpeg" />
+        
         <Navbar.Brand className="text-wrap"><b>"EAT WHATEVER YOU WANT, AND IF ANYONE TRIES TO LECTURE YOU ABOUT YOUR WEIGHT, EAT THEM TOO"</b></Navbar.Brand>
         {loginActions}
       </Container>

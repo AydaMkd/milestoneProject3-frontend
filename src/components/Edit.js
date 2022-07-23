@@ -130,7 +130,7 @@ function Edit(props) {
 									/>
 								</div>
 							</div>
-							<input className="btn btn-primary" type="submit" value="Save Recipe" />
+							<input className="editbtn" type="submit" value="Save Recipe" />
 						</form>
 					</main>
 				</Card.Body>
