@@ -38,12 +38,7 @@ function Nutrition() {
         setCalories(resData)
     }
 
-
-    console.log(calories)
-    let types = typeof (calories)
     let arrays = calories.items;
-    console.log(arrays)
-    console.log(typeof (arrays))
     function totalcalories() {
         
         if (arrays != null) {
@@ -60,38 +55,42 @@ function Nutrition() {
             let item7 = '';
             let item8 = '';
             let item9 = ''
+            
 
             for (const key in arrays) {
                 sum1 = (Object.values(arrays)[key].calories)
                 sum = (Object.values(arrays)[key].serving_size_g)
                 item = (Object.values(arrays)[key].name)
-                item1 = (Object.values(arrays)[key].carbohydrates_total_g)*0.035.toFixed(2)
-                item2 = (Object.values(arrays)[key].cholesterol_mg)*(0.035/1000).toFixed(2)
-                item3 = (Object.values(arrays)[key].fat_saturated_g)*0.035.toFixed(2)
-                item4 = (Object.values(arrays)[key].fat_total_g)*0.035.toFixed(2)
-                item5 = (Object.values(arrays)[key].fiber_g)*0.035.toFixed(2)
-                item6 = (Object.values(arrays)[key].potassium_mg)*(0.035/1000).toFixed(2)
-                item7 = (Object.values(arrays)[key].protein_g)*0.035.toFixed(2)
-                item8 = (Object.values(arrays)[key].sodium_mg)*(0.035/1000).toFixed(2)
-                item9 = (Object.values(arrays)[key].sugar_g)*0.035.toFixed(2)
+                item1 = (Object.values(arrays)[key].carbohydrates_total_g)
+                item2 = (Object.values(arrays)[key].cholesterol_mg)
+                item3 = (Object.values(arrays)[key].fat_saturated_g)
+                item4 = (Object.values(arrays)[key].fat_total_g)
+                item5 = (Object.values(arrays)[key].fiber_g)
+                item6 = (Object.values(arrays)[key].potassium_mg)
+                item7 = (Object.values(arrays)[key].protein_g)
+                item8 = (Object.values(arrays)[key].sodium_mg)
+                item9 = (Object.values(arrays)[key].sugar_g)
             }
-            sum2 = (sum * 0.035).toFixed(2);
+           
 
-            console.log(sum2)
-
-            return String("Total number of calories for a serving of " + item + " is " + sum1 +".\nServing size is " + sum2 + " oz.\n More nutritious values: Carbohydrates_total_oz: " +item1+". Cholesterol_oz: "+item2 +" .Fat_saturated_oz: " +item3 +" .Fat_total_oz: "+item4 +"  .Fiber_oz: " +item5+"  .Potassium_oz: " +item6 +" .protein_g: " +item7+" .Sodium_oz: "+item8+"  .Sugar_oz: "+item9)
+            return String("Total number of calories for a serving of " +item + " is " + sum1 +".\nServing size is " + sum + " g.\n More nutritious values: Carbohydrates_total_g: " +item1+". Cholesterol_g: "+item2 +" .Fat_saturated_g: " +item3 +" .Fat_total_g: "+item4 +"  .Fiber_g: " +item5+"  .Potassium_g: " +item6 +" .protein_g: " +item7+" .Sodium_g: "+item8+"  .Sugar_g: "+item9)
+           
+           
         }
     }
 
     let recipeCalories = totalcalories()
-    console.log(recipeCalories)
+    console.log(typeof(recipeCalories))
+
     let display = (
         <>
-            <h4 className='nutrtion'>{recipeCalories}</h4>
+         <h4 className='nutrtion'>{recipeCalories}</h4> 
+            
+  
             </>
     )
 
-    if (arrays = null) {
+    if (arrays == null) {
         display = (
             <>
 
@@ -105,7 +104,7 @@ function Nutrition() {
             <h3>Enter ingredient or recipe name to search for their nutritious value </h3>
         </span>
             <input type="text" placeholder="Enter search" onChange={(e) => setQuery(e.target.value)} value={query} />
-            <input type="submit" onClick={handleSearch} />
+            <input className="searchbtn" type="submit" onClick={handleSearch} />
             <span>
                 {display}
             </span>

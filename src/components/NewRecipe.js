@@ -145,7 +145,7 @@ function NewRecipe() {
 									/>
 								</div>
 							</div>
-							<input className="btn btn-primary" type="submit" value="Add Recipe" />
+							<input className="addrecipebtn" type="submit" value="Add Recipe" />
 						</form>
 					</main>
 				</Card.Body>

@@ -63,7 +63,11 @@ function Recipes() {
                                                         <div><b>Cook Time:</b> {recipe.cooktime}</div>
                                                         <div><b>Ingredients:</b> {recipe.ingredients}</div>
                                                         <div><b>Directions: </b> {recipe.directions}</div>
+<<<<<<< HEAD
                                                    
+=======
+                                                    
+>>>>>>> bf4d47b7c23976c937aa950bce07c7bfff5029d9
                                                 </div>
                                             </div>
                                         </div>

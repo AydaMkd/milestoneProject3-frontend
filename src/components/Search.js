@@ -1,3 +1,5 @@
+
+
 import { useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
@@ -48,7 +50,7 @@ function Search() {
         display = (
             <>
                 {menus.map(menu => {
-                    return (
+                     return (
                         <div>
                             <Container>
                             <Card style={{border: '5px solid rgb(252, 207, 60)'}} >
@@ -58,6 +60,7 @@ function Search() {
                                             <Accordion.Body>
                                                 <div className="container my-5">
                                                     <div className="card row flex-row-reverse">
+<<<<<<< HEAD
                                                         <img className="col-lg-4 card-img-end img-fluid p-0" src={menu.image} alt="recipeimage"/>
                                                         <div className="col-lg-8 card-body">
                                                             <h4 className="card-title">{menu.description}</h4>
@@ -65,6 +68,15 @@ function Search() {
                                                                 <ul>
                                                                     <li><b>Cuisine:</b> {menu.cuisines}</li>
                                                                     <li><b>Difficulty</b> {menu.difficulty}</li>
+=======
+                                                        <img className="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
+                                                        <div className="col-lg-8 card-body">
+                                                            <h4 className="card-title">{menu.description}</h4>
+                                                            <p className="card-text">
+                                                                <ul>
+                                                                    <li><b>Cuisine:</b> {menu.cuisines}</li>
+                                                                    <li><b>Difficulty:</b> {menu.difficulty}</li>
+>>>>>>> bf4d47b7c23976c937aa950bce07c7bfff5029d9
                                                                     <li><b>Prep Time:</b> {menu.preptime}</li>
                                                                     <li><b>Cook Time:</b> {menu.cooktime}</li>
                                                                     <li><b>Ingredients:</b> {menu.ingredients}</li>
@@ -92,12 +104,15 @@ function Search() {
     }
 
     return (
+        
         <div className="text-center">
-            <input type="submit" value="Search" onClick={handleSearch} />
-            <input type="text" placeholder="        by recipe name" onChange={(e) => setQuery(e.target.value)} value={query} />
+       
+            <input type="submit" className="searchbtn" value="Search" onClick={handleSearch} />
+            <input type="text" placeholder="        by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
             {display}
             <br></br>
         </div>
+        
     )
 }
 
