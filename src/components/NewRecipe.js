@@ -22,7 +22,8 @@ function NewRecipe() {
 	console.log(recipe)
 	async function handleSubmit(e) {
 		e.preventDefault()
-		const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes`, {
+		// const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes`, {
+			const response = await fetch(`http://localhost:5000/api/recipes`, {
 			method: 'POST',
 			headers: {
 				'x-auth-token': localStorage.getItem('token'),

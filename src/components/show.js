@@ -12,8 +12,8 @@ function Profile() {
     useEffect(() => {
         console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/myrecipes`, {
-
+            // const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/myrecipes`, {
+                const response = await fetch(`http://localhost:5000/api/recipes/myrecipes`, {
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),
                     'Content-Type': 'application/json'

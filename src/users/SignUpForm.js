@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
-import background from "../backgroundImages/colorfulpeppers.png"
 
 
 function SignUpForm() {
@@ -16,7 +15,8 @@ function SignUpForm() {
 	async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`https://hangrynomster.herokuapp.com/api/users/`, {
+		// await fetch(`https://hangrynomster.herokuapp.com/api/users/`, {
+			await fetch(`hhttp://localhost:5000/api/users/`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

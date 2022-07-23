@@ -18,8 +18,8 @@ function Profile() {
     useEffect(() => {
         console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/myrecipes`, {
-
+            // const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/myrecipes`, {
+                const response = await fetch(`http://localhost:5000/api/recipes/myrecipes`, {
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),
                     'Content-Type': 'application/json'
@@ -27,13 +27,13 @@ function Profile() {
             })
             const resData = await response.json()
             // if data is the same, don't update
-            if (resData != myrecipes) {
+            if (resData !== myrecipes) {
                 setMyrecipes(resData)
             }
 
         }
         fetchData()
-    }, [])
+    }, [myrecipes])
 
     const getRecipeIndexById = (recipeId, recipes) => {
         let newRecipes = [];
@@ -125,7 +125,7 @@ function Profile() {
                                 <Accordion.Body>
                                     <div class="container my-5">
                                         <div class="card row flex-row-reverse">
-                                            <img class="col-lg-4 card-img-end img-fluid p-0" src={myrecipe.image} />
+                                            <img class="col-lg-4 card-img-end img-fluid p-0" src={myrecipe.image} alt="recipeimage"/>
                                             <div class="col-lg-8 card-body">
                                                 <h4 class="card-title">{myrecipe.description}</h4>
                                                 <p class="card-text">

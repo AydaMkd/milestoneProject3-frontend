@@ -12,10 +12,11 @@ function NewComment() {
 	})
 
 	console.log(recipe)
-	async function handleSubmit(e) {
+	async function handleSubmit(e) {http://localhost:5000
 		e.preventDefault()
-		const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/comment`, {
-			method: 'POST',
+		// const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/comment`, {
+			const response = await fetch(`http://localhost:5000/api/recipes/comment`, {
+		method: 'POST',
 			headers: {
 				'x-auth-token': localStorage.getItem('token'),
 				'Content-Type': 'application/json'

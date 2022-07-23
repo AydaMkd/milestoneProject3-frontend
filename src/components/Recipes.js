@@ -14,8 +14,8 @@ function Recipes() {
     useEffect(() => {
         console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/`, {
-
+            // const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/`, {
+                const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/`, {
                 headers: {
                     //'x-auth-token': localStorage.getItem('token'),
                     'Content-Type': 'application/json'
@@ -54,16 +54,17 @@ function Recipes() {
                                             <img className="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
                                             <div className="col-lg-8 card-body">
                                                 <h4 className="card-title">{recipe.description}</h4>
-                                                {/* <p className="card-text"> */}
-                                                    <ul>
-                                                        <li><b>Cuisine:</b> {recipe.cuisines}</li>
-                                                        <li><b>Difficulty</b> {recipe.difficulty}</li>
-                                                        <li><b>Prep Time:</b> {recipe.preptime}</li>
-                                                        <li><b>Cook Time:</b> {recipe.cooktime}</li>
-                                                        <li><b>Ingredients:</b> {recipe.ingredients}</li>
-                                                        <li><b>Directions: </b> {recipe.directions}</li>
-                                                    </ul>
-                                                {/* </p> */}
+                                                <div className="card-text">
+                                                    
+                                                        <div><b>Cuisine:</b> {recipe.cuisines}</div>
+                                                        <div><b>Difficulty</b> {recipe.difficulty}</div>
+                                                        <div><b>Ingredients:</b> {recipe.ingredients}</div>
+                                                        <div><b>Prep Time:</b> {recipe.preptime}</div>
+                                                        <div><b>Cook Time:</b> {recipe.cooktime}</div>
+                                                        <div><b>Ingredients:</b> {recipe.ingredients}</div>
+                                                        <div><b>Directions: </b> {recipe.directions}</div>
+                                                   
+                                                </div>
                                             </div>
                                         </div>
                                     </div>                                    

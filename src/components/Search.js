@@ -9,13 +9,13 @@ function Search() {
     const [menus, setMenus] = useState('')
     const [query, setQuery] = useState('');
 
-    const resData = null
+    // const resData = null
     const navigate = useNavigate()
 
     async function handleSearch(e) {
         e.preventDefault()
-        const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/search/${query}`, {
-        // const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
+        // const response = await fetch(`https://hangrynomster.herokuapp.com/api/recipes/search/${query}`, {
+        const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
 
 
             headers: {
@@ -58,7 +58,7 @@ function Search() {
                                             <Accordion.Body>
                                                 <div className="container my-5">
                                                     <div className="card row flex-row-reverse">
-                                                        <img className="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
+                                                        <img className="col-lg-4 card-img-end img-fluid p-0" src={menu.image} alt="recipeimage"/>
                                                         <div className="col-lg-8 card-body">
                                                             <h4 className="card-title">{menu.description}</h4>
                                                             {/* <p className="card-text"> */}

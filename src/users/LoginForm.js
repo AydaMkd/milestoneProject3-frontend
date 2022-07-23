@@ -18,7 +18,8 @@ function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch(`https://hangrynomster.herokuapp.com/api/auth`, {
+        // const response = await fetch(`https://hangrynomster.herokuapp.com/api/auth`, {
+            const response = await fetch(`http://localhost:5000/api/auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
