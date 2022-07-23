@@ -11,7 +11,7 @@ function Edit(props) {
 	const [recipe, setRecipe] = useState(props.recipe);
 	async function handleSubmit(e) {
 		e.preventDefault()
-		const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/myrecipes/${recipe._id}/${recipe.user}`, {
+		const response = await fetch(`https://hangrynomster.herokuapp.com//api/recipes/myrecipes/${recipe._id}/${recipe.user}`, {
 			method: 'PUT',
 			headers: {
 				'x-auth-token': localStorage.getItem('token'),

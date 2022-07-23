@@ -16,7 +16,7 @@ function SignUpForm() {
 	async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`https://recipesharingbackend.herokuapp.com/api/users/`, {
+		await fetch(`https://hangrynomster.herokuapp.com//api/users/`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

@@ -12,7 +12,7 @@ function Profile() {
     useEffect(() => {
         console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`https://recipesharingbackend.herokuapp.com//api/recipes/myrecipes`, {
+            const response = await fetch(`https://hangrynomster.herokuapp.com///api/recipes/myrecipes`, {
 
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),

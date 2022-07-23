@@ -14,8 +14,8 @@ function Search() {
 
     async function handleSearch(e) {
         e.preventDefault()
-        const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/search/${query}`, {
-
+        const response = await fetch(`https://hangrynomster.herokuapp.com//api/recipes/search/${query}`, {
+        // const response = await fetch(`http://localhost:5000/api/recipes/search/${query}`, {
 
 
             headers: {
@@ -42,27 +42,7 @@ function Search() {
 
         </>
 
-        /*      );
-            if (menus.length > 0) {display = (
-           <>
-           <ul>
-          {menus.map(menu => {
-            return (
-              <ul>
-              <li >
-                {menu.recipename}
-              </li>
-              <li >
-              <img width="200" height="200" src={menu.image} />
-              </li>
-              <li >
-                {menu.preptime}
-              </li>
-              </ul>
-            )
-          })}
-        </ul> */
-
+       
     );
     if (menus.length > 0) {
         display = (
@@ -76,12 +56,12 @@ function Search() {
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>{menu.recipename}</Accordion.Header>
                                             <Accordion.Body>
-                                                <div class="container my-5">
-                                                    <div class="card row flex-row-reverse">
-                                                        <img class="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
-                                                        <div class="col-lg-8 card-body">
-                                                            <h4 class="card-title">{menu.description}</h4>
-                                                            <p class="card-text">
+                                                <div className="container my-5">
+                                                    <div className="card row flex-row-reverse">
+                                                        <img className="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
+                                                        <div className="col-lg-8 card-body">
+                                                            <h4 className="card-title">{menu.description}</h4>
+                                                            <p className="card-text">
                                                                 <ul>
                                                                     <li><b>Cuisine:</b> {menu.cuisines}</li>
                                                                     <li><b>Difficulty</b> {menu.difficulty}</li>

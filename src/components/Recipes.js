@@ -3,7 +3,6 @@ import Search from "./Search";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import { Image } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router"
 
 function Recipes() {
@@ -15,7 +14,7 @@ function Recipes() {
     useEffect(() => {
         console.log('useEffect')
         const fetchData = async () => {
-            const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/`, {
+            const response = await fetch(`https://hangrynomster.herokuapp.com//api/recipes/`, {
 
                 headers: {
                     //'x-auth-token': localStorage.getItem('token'),
@@ -37,7 +36,7 @@ function Recipes() {
     }
 
     return (<>
-        <h1 className="text-center">Recipes</h1>
+        <h1 class="text-center">Recipes</h1>
         <div>
             <Search />
         </div>
@@ -46,7 +45,7 @@ function Recipes() {
             return (
                 <Container>
                     <Card>
-                        <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+                        <Accordion defaultActiveKey={recipe._id}>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>{recipe.recipename}</Accordion.Header>
                                 <Accordion.Body>
