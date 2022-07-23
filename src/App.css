@@ -73,6 +73,38 @@
   width: 75px;
   margin: 5px;
 }
+
+.addrecipebtn {
+  background-color: rgb(237, 124, 26);
+  color: white;
+  border-color: rgb(237, 124, 26);
+  text-align: center;
+  border-radius: 10%;
+  height: 40px;
+  width: 100px;
+  margin: 5px;
+}
+
+.deletebtn {
+  background-color: rgb(242, 91, 9);
+  color: white;
+  border-color: rgb(242, 91, 9);
+  text-align: center;
+  border-radius: 10%;
+  height: 40px;
+  width: 150px;
+  margin: 5px;
+}
+
+.editbtn {
+  background-color: rgb(255, 244, 96);
+  border-color: rgb(255, 244, 96);
+  text-align: center;
+  border-radius: 10%;
+  height: 40px;
+  width: 150px;
+  margin: 5px;
+}
 .signupimg {
   position: relative;
 }
@@ -104,5 +136,5 @@
 
 
 .nutrtion{
-  color: blue
+  color: rgb(242, 91, 9)
 }

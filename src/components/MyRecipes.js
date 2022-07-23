@@ -123,12 +123,12 @@ function Profile() {
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>{myrecipe.recipename}</Accordion.Header>
                                 <Accordion.Body>
-                                    <div class="container my-5">
-                                        <div class="card row flex-row-reverse">
-                                            <img class="col-lg-4 card-img-end img-fluid p-0" src={myrecipe.image} />
-                                            <div class="col-lg-8 card-body">
-                                                <h4 class="card-title">{myrecipe.description}</h4>
-                                                <p class="card-text">
+                                    <div className="container my-5">
+                                        <div className="card row flex-row-reverse">
+                                            <img className="col-lg-4 card-img-end img-fluid p-0" src={myrecipe.image} />
+                                            <div className="col-lg-8 card-body">
+                                                <h4 className="card-title">{myrecipe.description}</h4>
+                                                <p className="card-text">
                                                     <ul>
                                                         <li><b>Cuisine:</b> {myrecipe.cuisines}</li>
                                                         <li><b>Difficulty</b> {myrecipe.difficulty}</li>
@@ -137,10 +137,14 @@ function Profile() {
                                                         <li><b>Cook Time:</b> {myrecipe.cooktime}</li>
                                                          <li><b>Directions:</b> {myrecipe.steps}{myrecipe.directions}</li>
                                                     </ul>
-                                                </p>                                                
-                                                <Button onClick={onRecipeEdit} data-id={myrecipe._id}>Edit Recipe</Button>
+                                                </p>
+                                                <input type="submit" className="editbtn" value="Edit Recipe" onClick={onRecipeEdit} data-id={myrecipe._id} />                                               
+                                                {/* <Button className="editbtn" onClick={onRecipeEdit} data-id={myrecipe._id}>Edit Recipe</Button> */}
                                                 <br></br>
-                                                <Button className="btn btn-danger" onClick={onRecipeDelete} data-id={myrecipe._id}>Delete Recipe</Button>
+                                                <input type="submit" className="deletebtn" value="Delete Recipe"  onClick={onRecipeDelete} data-id={myrecipe._id} /> 
+                                                {/* <Button className="deletebtn" onClick={onRecipeDelete} data-id={myrecipe._id}>Delete Recipe</Button> */}
+
+                                                
                                             </div>
                                         </div>
                                     </div>

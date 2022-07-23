@@ -16,7 +16,7 @@ const About = () => {
                             final Milestone project for a software development bootcamp.
                         
                             We hope you enjoy it!
-                            <br></br>
+                        <br></br>
 
                             The idea for ths application began when one member of the team was eating dinner and thought about the diversity of this team and how many amazing recipes they might have to share between them.
                         
