@@ -45,8 +45,8 @@ function Recipes() {
             return (
                 <Container>
                     <Card>
-                        <Accordion defaultActiveKey={recipe._id}>
-                            <Accordion.Item eventKey={recipe._id}>
+                        <Accordion defaultActiveKey={new Date(recipe.date).getUTCMilliseconds()}>
+                            <Accordion.Item eventKey="0">
                                 <Accordion.Header>{recipe.recipename}</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="container my-5">
