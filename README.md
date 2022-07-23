@@ -2,7 +2,10 @@
 This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
-(add link) 
+
+https://recipesharingfrontend.herokuapp.com/
+
+
 
 ## Table of Contents
 
@@ -67,24 +70,26 @@ Made by:
     - Bootstrap
     - React
   ### Back End  
-    - Node
+    - Node w/express
     - MongoDb
-    - Mongoose
-    - JWT
+    - PassportJS
+    - Heroku
 
 ## Install & Run
- (copy link )
-
+ - ### Frontend (https://github.com/AydaMkd/milestoneProject3-frontend.git)
+ - #### npm install
+ - ### Backend (https://github.com/AydaMkd/milestoneProject3-backend.git)
+ - #### nodemon
 ## Usage
+
 User should be able to submit their own recipes, keep their favorite receipts, rate and comment in other user's recipes. 
 
 ## Sources
+
+Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete and our Modal.
+
 ### Learned to align images on readme.
 (https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
-
-### YouTube tutorial on how to start a recipe app.
-
-(https://www.youtube.com/watch?v=xc4uOzlndAk)
 
 ### guide to add background images.
 (https://www.w3schools.com/jsref/prop_style_backgroundimage.asp)
