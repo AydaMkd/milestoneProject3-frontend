@@ -2,9 +2,10 @@
 This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
-
+ #### Deployment one:
 https://recipesharingfrontend.herokuapp.com/
-
+ #### Deployment two:
+https://recipe-sharing3.herokuapp.com/
 
 
 ## Table of Contents
@@ -26,7 +27,7 @@ https://recipesharingfrontend.herokuapp.com/
 - [Work In Progress](#WorkInProgress)
 
 ## Project Description
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)Â¸ as well as the rest of the course.
 
 ## Team Name
 
@@ -109,7 +110,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
 ## Sources
 
-#### :star: Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete buttons and our Modal :star:
+#### :star: :star: :star: Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete buttons and our Modal :star: :star: :star:
 
 ### Learned to align images on readme.
 (https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
@@ -136,24 +137,25 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
 - Use cards from bootstrap
 
+[calorieninjas API](https://calorieninjas.com/api)
 
-[Spoonacular API](https://rapidapi.com/blog/recipe-apis/)
-
+:art:
 [ColorPalettes1](https://coolors.co/palette/f7b267-f79d65-f4845f-f27059-f25c54)
-
+:art:
 [ColorPalettes2](https://coolors.co/palette/fff460-fccf3c-fc9d28-ed7c1a-f25b09)
 
 
 ### Issues
 
-#### Working as a team being in constant communication is key. We do run into a merge issues with our branches.
+#### - Working as a team and being in constant communication it is key :thumbsup:. We do run into a merge issues with our branches. The person who is going to push new code must do git pull origin main to avoid override someone else code also unecessary branches should be removed after submitting work.  
+#### - Keeping you code in new branches just for fear to breaking something and not sorting your own code to work with main branch it is not an option, because in the end you finish with multiple branches that are behind the main branch. :thumbsdown:
+
 <br>
 
 ### What we learned:
 - When working as a team, make sure to work in the latest version of the repository.
-- git pull origin main it is a must, so you do not override the previous work of your team.
 - Connecting the Front-End with Back-End.
-- Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a regression in the application. 
+- Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a   regression in the application. 
 - Time frame, Install everything we want in short amount of time.
 
 ### Work In Progress
@@ -162,3 +164,4 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 - Add Difficulty Rating
 - inventory of ingredients in pantry 
 - link to grocery store shopping car for missing ingredients
+
