@@ -8,17 +8,15 @@ const About = () => {
                 <Card.Img style={{ objectFit: "cover" }} src="./images/HangryLogo.jpeg" alt="Hangry Logo" />
                 <Card.ImgOverlay>
                     <Card.Text>
-                        <h1>About Us</h1>
+                        About Us
                         <br></br>
-                        <h3>
+                        
                             We created this app to find and share recipes. This is our
-                        </h3>
-                        <h3>
+                        
                             final Milestone project for a software development bootcamp.
-                        </h3>
-                        <h3>
+                        
                             We hope you enjoy it!
-                        </h3>
+                        
                     </Card.Text>
                 </Card.ImgOverlay>
             </Card>
