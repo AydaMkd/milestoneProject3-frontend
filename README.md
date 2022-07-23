@@ -147,7 +147,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
 ### Issues
 
-#### - Working as a team and being in constant communication it is key :thumbsup:. We do run into a merge issues with our branches. The person who is going to push new code must do git pull origin main to avoid override someone else code also unecessary branches should be removed after submitting work.  
+#### - Working as a team and being in constant communication it is key :thumbsup:. We did run into a merge issues with our branches. The person who is going to push new code must do git pull origin main to avoid override someone else code also unecessary branches should be removed after submitting work.  
 #### - Keeping you code in new branches just for fear to breaking something and not sorting your own code to work with main branch it is not an option, because in the end you finish with multiple branches that are behind the main branch. :thumbsdown:
 
 <br>
