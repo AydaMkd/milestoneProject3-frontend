@@ -61,7 +61,7 @@ function Search() {
                                                         <img className="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
                                                         <div className="col-lg-8 card-body">
                                                             <h4 className="card-title">{menu.description}</h4>
-                                                            <p className="card-text">
+                                                            {/* <p className="card-text"> */}
                                                                 <ul>
                                                                     <li><b>Cuisine:</b> {menu.cuisines}</li>
                                                                     <li><b>Difficulty</b> {menu.difficulty}</li>
@@ -70,7 +70,7 @@ function Search() {
                                                                     <li><b>Ingredients:</b> {menu.ingredients}</li>
                                                                     <li><b>Directions: </b> {menu.directions}</li>
                                                                 </ul>
-                                                            </p>
+                                                            {/* </p> */}
                                                         </div>
                                                     </div>
                                                 </div>

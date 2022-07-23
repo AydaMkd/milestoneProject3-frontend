@@ -46,7 +46,7 @@ function Recipes() {
                 <Container>
                     <Card>
                         <Accordion defaultActiveKey={recipe._id}>
-                            <Accordion.Item eventKey="0">
+                            <Accordion.Item eventKey={recipe._id}>
                                 <Accordion.Header>{recipe.recipename}</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="container my-5">
@@ -54,7 +54,7 @@ function Recipes() {
                                             <img className="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
                                             <div className="col-lg-8 card-body">
                                                 <h4 className="card-title">{recipe.description}</h4>
-                                                <p className="card-text">
+                                                {/* <p className="card-text"> */}
                                                     <ul>
                                                         <li><b>Cuisine:</b> {recipe.cuisines}</li>
                                                         <li><b>Difficulty</b> {recipe.difficulty}</li>
@@ -63,7 +63,7 @@ function Recipes() {
                                                         <li><b>Ingredients:</b> {recipe.ingredients}</li>
                                                         <li><b>Directions: </b> {recipe.directions}</li>
                                                     </ul>
-                                                </p>
+                                                {/* </p> */}
                                             </div>
                                         </div>
                                     </div>                                    
