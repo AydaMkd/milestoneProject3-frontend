@@ -76,9 +76,9 @@ Made by:
     - Heroku
 
 ## Install & Run
- - ### Frontend (https://github.com/AydaMkd/milestoneProject3-frontend.git)
+ - #### Frontend (https://github.com/AydaMkd/milestoneProject3-frontend.git)
  - #### npm install
- - ### Backend (https://github.com/AydaMkd/milestoneProject3-backend.git)
+ - #### Backend (https://github.com/AydaMkd/milestoneProject3-backend.git)
  - #### nodemon
 ## Usage
 
@@ -86,7 +86,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
 ## Sources
 
-Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete and our Modal.
+# Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete buttons and our Modal.
 
 ### Learned to align images on readme.
 (https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
