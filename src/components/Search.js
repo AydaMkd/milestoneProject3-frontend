@@ -19,7 +19,7 @@ function Search() {
 
 
             headers: {
-                'x-auth-token': localStorage.getItem('token'),
+                // 'x-auth-token': localStorage.getItem('token'),
                 'Content-Type': 'application/json'
             },
         })
