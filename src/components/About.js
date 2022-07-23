@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 
 const About = () => {
     return (
+        <div className='aboutbg'>
         <Container>
             <Card className="bg-dark text-black text-center" border="info">
                 <Card.Img style={{ objectFit: "cover" }} src="./images/HangryLogo.jpeg" alt="Hangry Logo" />
@@ -24,6 +25,7 @@ const About = () => {
                 </Card.ImgOverlay>
             </Card>
         </Container>
+        </div>
     );
 }
 

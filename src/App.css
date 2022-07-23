@@ -19,7 +19,10 @@
 }
 .justify-content-center {
   background-color: rgb(252, 207, 60);
-  font-size: 15em black;
+  font-weight: bolder;
+  color: black;
+
+  
 }
 
 .login {
@@ -137,4 +140,8 @@
 
 .nutrtion{
   color: rgb(242, 91, 9)
+}
+
+.aboutbg {
+  background-color: rgb(255, 244, 96);
 }
