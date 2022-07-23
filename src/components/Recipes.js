@@ -50,12 +50,12 @@ function Recipes() {
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>{recipe.recipename}</Accordion.Header>
                                 <Accordion.Body>
-                                    <div class="container my-5">
-                                        <div class="card row flex-row-reverse">
-                                            <img class="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
-                                            <div class="col-lg-8 card-body">
-                                                <h4 class="card-title">{recipe.description}</h4>
-                                                <div class="card-text">
+                                    <div className="container my-5">
+                                        <div className="card row flex-row-reverse">
+                                            <img className="col-lg-4 card-img-end img-fluid p-0" src={recipe.image} />
+                                            <div className="col-lg-8 card-body">
+                                                <h4 className="card-title">{recipe.description}</h4>
+                                                <div className="card-text">
                                                     
                                                         <div><b>Cuisine:</b> {recipe.cuisines}</div>
                                                         <div><b>Difficulty</b> {recipe.difficulty}</div>

@@ -63,13 +63,36 @@
   margin: 5px;
 }
 
-
+.searchbtn {
+  background-color: rgb(237, 124, 26);
+  color: white;
+  border-color: rgb(237, 124, 26);
+  text-align: center;
+  border-radius: 10%;
+  height: 40px;
+  width: 75px;
+  margin: 5px;
+}
 .signupimg {
   position: relative;
 }
 .signupimg::after {
   content: '';
   background-image: url('/src/backgroundImages/colorfulpeppers.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.3;
+  z-index: -1;
+}
+.loginimg {
+  position: relative;
+}
+.loginimg::after {
+  content: '';
+  background-image: url('/src/backgroundImages/nathanunsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;

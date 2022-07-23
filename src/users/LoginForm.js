@@ -41,6 +41,14 @@ function LoginForm() {
 
     return (
         <main>
+            <div className="loginimg">
+			<div className="box">
+			
+			
+			
+			</div>
+			</div>
+            
             <h1>Login</h1>
             {errorMessage !== null
                 ? (
@@ -80,6 +88,7 @@ function LoginForm() {
                 </div>
                 <input className="loginbtn" type="submit" value="Login" />
             </form>
+            Photo by <a href="https://unsplash.com/@thoughtcatalog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thought Catalog</a> on <a href="https://unsplash.com/s/photos/smashed-plate?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </main>
     )
 }

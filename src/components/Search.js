@@ -78,12 +78,12 @@ function Search() {
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>{menu.recipename}</Accordion.Header>
                                             <Accordion.Body>
-                                                <div class="container my-5">
-                                                    <div class="card row flex-row-reverse">
-                                                        <img class="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
-                                                        <div class="col-lg-8 card-body">
-                                                            <h4 class="card-title">{menu.description}</h4>
-                                                            <p class="card-text">
+                                                <div className="container my-5">
+                                                    <div className="card row flex-row-reverse">
+                                                        <img className="col-lg-4 card-img-end img-fluid p-0" src={menu.image} />
+                                                        <div className="col-lg-8 card-body">
+                                                            <h4 className="card-title">{menu.description}</h4>
+                                                            <p className="card-text">
                                                                 <ul>
                                                                     <li><b>Cuisine:</b> {menu.cuisines}</li>
                                                                     <li><b>Difficulty:</b> {menu.difficulty}</li>
@@ -114,12 +114,15 @@ function Search() {
     }
 
     return (
+        
         <div className="text-center">
-            <input type="submit" value="Search" onClick={handleSearch} />
+       
+            <input type="submit" className="searchbtn" value="Search" onClick={handleSearch} />
             <input type="text" placeholder="        by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
             {display}
             <br></br>
         </div>
+        
     )
 }
 
