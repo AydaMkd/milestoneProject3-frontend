@@ -145,3 +145,14 @@
 .aboutbg {
   background-color: rgb(255, 244, 96);
 }
+
+.addbacktorecipebtn {
+  background-color: rgb(237, 124, 26);
+  color: white;
+  border-color: rgb(237, 124, 26);
+  text-align: center;
+  border-radius: 10%;
+  height: 40px;
+  width: 200px;
+  margin: 5px;
+}
