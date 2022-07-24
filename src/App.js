@@ -14,7 +14,7 @@ import Recipes from './components/Recipes';
 import Edit from './components/Edit';
 import About from './components/About';
 import MyRecipes from './components/MyRecipes';
-import Search from './components/Search'
+import Recipedisplay from './components/Recipedisplay';
 
 function App() {
 
@@ -32,7 +32,7 @@ function App() {
           <Route path="/myRecipes" element={<MyRecipes />} /> 
           <Route path="/newRecipe" element={<NewRecipe />} />
           <Route path="/nutrition" element={<Nutrition />} />
-          <Route path="/search/:query" element={<Search />} />    
+            
         </Routes>
       </BrowserRouter>
     </CurrentUserProvider>
