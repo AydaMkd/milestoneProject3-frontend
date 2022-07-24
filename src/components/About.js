@@ -19,7 +19,7 @@ const About = () => {
                             We hope you enjoy it!
                         <br></br>
 
-                            The idea for ths application began when one member of the team was eating dinner and thought about the diversity of this team and how many amazing recipes they might have to share between them.
+                            The idea for this application began when one member of the team was eating dinner and thought about the diversity of this team and how many amazing recipes they might have to share between them.
                         
                     </Card.Text>
                 </Card.ImgOverlay>
