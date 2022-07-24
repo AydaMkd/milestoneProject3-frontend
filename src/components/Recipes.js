@@ -129,7 +129,7 @@ function Recipes() {
 
                 <div className= "text-center">
                 <input type="submit" className="searchbtn" value="Search" onClick={handleSearch} />
-            <input type="text" placeholder="  by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
+            <input type="text" placeholder="  by recipe name" onChange={(e) => setQuery(e.target.value)} value={query} />
            
             <br></br>
             
