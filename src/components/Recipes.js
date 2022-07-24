@@ -112,6 +112,7 @@ function Recipes() {
                                 </Accordion>
                             </Card>
                         </Container>
+                        <button className="addbacktorecipebtn" value="recipes" onClick={handleClick} >Back to Recipes</button>
 
                     </div>
 
@@ -131,7 +132,7 @@ function Recipes() {
             <input type="text" placeholder="  by ingredients" onChange={(e) => setQuery(e.target.value)} value={query} />
            
             <br></br>
-            <button className="addbacktorecipebtn" value="recipes" onClick={handleClick} >Back to Recipes</button>
+            
             <br></br>
                 {display}</div>
             )
