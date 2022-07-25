@@ -76,7 +76,7 @@ function Profile() {
         if (currentTarget) {
             const recipeId = currentTarget.getAttribute('data-id');
             if (recipeId) {
-                fetch(`${baseUrl}api/recipes/myrecipes/${recipeId}`, {
+                fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/myrecipes/${recipeId}`, {
                     method: 'DELETE', headers: {
                         'x-auth-token': localStorage.getItem('token'),
                         'Content-Type': 'application/json'
