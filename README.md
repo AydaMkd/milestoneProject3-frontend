@@ -1,5 +1,5 @@
 # milestoneProject3-frontend
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
 
@@ -147,8 +147,8 @@ User should be able to submit their own recipes, keep their favorite recicpes, r
 ### What we learned:
 - When working as a team, make sure to work in the latest version of the repository.
 - Connecting the Front-End with Back-End.
-- Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a   regression in the application. 
-- Time frame, Install everything we want in short amount of time.
+- Some dependencies have different versions so our code deprecated. The code superseded by the newer one. Code was not inmediately removed because this can cause a regression in the application. 
+- Time frame, implementing the features we planned in a short amount of time.
 
 ### Work In Progress
 - Calorie Counts
