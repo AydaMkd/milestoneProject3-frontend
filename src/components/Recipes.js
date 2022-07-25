@@ -112,14 +112,14 @@ function Recipes() {
                                 </Accordion>
                             </Card>
                         </Container>
-                        <button className="addbacktorecipebtn" value="recipes" onClick={handleClick} >Back to Recipes</button>
-
+                        
                     </div>
 
                 )
             })}
 
-       
+            <button className="addbacktorecipebtn" value="recipes" onClick={handleClick} >Back to Recipes</button>
+
         </>
     )
    
