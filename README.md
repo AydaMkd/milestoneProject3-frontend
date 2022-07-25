@@ -104,7 +104,7 @@ Made by:
  - #### nodemon
 ## Usage
 
-User should be able to submit their own recipes, keep their favorite recicpes, rate and comment on other user's recipes.
+User should be able to submit their own recipes, keep their favorite recicpes, rate and comment on other users recipes.
 ## Sources
 
 #### :star: :star: :star: Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete buttons and our Modal :star: :star: :star:
@@ -147,11 +147,11 @@ User should be able to submit their own recipes, keep their favorite recicpes, r
 ### What we learned:
 - When working as a team, make sure to work in the latest version of the repository.
 - Connecting the Front-End with Back-End.
-- Some dependencies have different versions so our code deprecated. The code superseded by the newer one. Code was not inmediately removed because this can cause a regression in the application. 
+- Some dependencies have different versions so our code deprecated. The code was superseded by the newer one. Code was not inmediately removed because this can cause a regression in the application. 
 - Time frame, implementing the features we planned in a short amount of time.
 
 ### Work In Progress
-- Calorie Counts
+- Calories Count
 - Serving Conversion (MyCookbook.io)
 - Add Difficulty Rating
 - inventory of ingredients in pantry 
