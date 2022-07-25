@@ -155,5 +155,5 @@ User should be able to submit their own recipes, keep their favorite recicpes, r
 - Serving Conversion (MyCookbook.io)
 - Add Difficulty Rating
 - inventory of ingredients in pantry 
-- link to grocery store shopping car for missing ingredients
+- link to grocery store shopping cart for missing ingredients
 
