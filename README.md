@@ -104,8 +104,7 @@ Made by:
  - #### nodemon
 ## Usage
 
-User should be able to submit their own recipes, keep their favorite receipts, rate and comment in other user's recipes. 
-
+User should be able to submit their own recipes, keep their favorite recicpes, rate and comment on other user's recipes.
 ## Sources
 
 #### :star: :star: :star: Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete buttons and our Modal :star: :star: :star:
@@ -133,7 +132,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
  ### Home Page
 
-- Use cards from bootstrap
+- Used cards from bootstrap
 
 [calorieninjas API](https://calorieninjas.com/api)
 
@@ -142,11 +141,6 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 :art:
 [ColorPalettes2](https://coolors.co/palette/fff460-fccf3c-fc9d28-ed7c1a-f25b09)
 
-
-### Issues
-
-#### - Working as a team and being in constant communication it is key :thumbsup:. We did run into a merge issues with our branches. The person who is going to push new code must do git pull origin main to avoid override someone else code also unecessary branches should be removed after submitting work.  
-#### - Keeping your code in new branches just for fear to breaking something and not sorting your own code to work with main branch it is not an option, because in the end you finish with multiple branches that are behind the main branch. :thumbsdown:
 
 <br>
 
