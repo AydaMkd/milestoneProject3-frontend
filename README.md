@@ -146,7 +146,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
 ### What we learned:
 - Connecting the Front-End with Back-End.
-- To make sure we are uptodate with the latest versions of the installed dependencies. 
+- To check the latest versions of the installed dependencies and be aware of what is deprecated. 
 - Time frame, implementing the features we planned in a short amount of time.
 
 ### Work In Progress
