@@ -1,5 +1,5 @@
 # milestoneProject3-frontend
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills we learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
 
@@ -26,7 +26,7 @@ https://recipesharingfrontend.herokuapp.com/
 - [Work In Progress](#WorkInProgress)
 
 ## Project Description
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)Â¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills we learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)Â¸ as well as the rest of the course.
 
 ## Team Name
 
@@ -133,7 +133,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 
  ### Home Page
 
-- Use cards from bootstrap
+- Used cards from bootstrap
 
 [calorieninjas API](https://calorieninjas.com/api)
 
@@ -142,24 +142,17 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 :art:
 [ColorPalettes2](https://coolors.co/palette/fff460-fccf3c-fc9d28-ed7c1a-f25b09)
 
-
-### Issues
-
-#### - Working as a team and being in constant communication it is key :thumbsup:. We did run into a merge issues with our branches. The person who is going to push new code must do git pull origin main to avoid override someone else code also unecessary branches should be removed after submitting work.  
-#### - Keeping your code in new branches just for fear to breaking something and not sorting your own code to work with main branch it is not an option, because in the end you finish with multiple branches that are behind the main branch. :thumbsdown:
-
 <br>
 
 ### What we learned:
-- When working as a team, make sure to work in the latest version of the repository.
 - Connecting the Front-End with Back-End.
-- Some programs version number change so our code deprecated. The code superseded by newer code. Code was not inmediately removed because can cause a   regression in the application. 
-- Time frame, Install everything we want in short amount of time.
+- To make sure we are uptodate with the latest versions of the installed dependencies. 
+- Time frame, implementing the features we planned in a short amount of time.
 
 ### Work In Progress
-- Calorie Counts
+- Calories Count
 - Serving Conversion (MyCookbook.io)
 - Add Difficulty Rating
-- inventory of ingredients in pantry 
-- link to grocery store shopping car for missing ingredients
+- Inventory of ingredients in pantry 
+- link to grocery store shopping cart for missing ingredients
 
