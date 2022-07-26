@@ -10,8 +10,6 @@ function NewComment() {
 	const [recipeComment, setRecipeComment] = useState({
 		comment: ''
 	})
-
-	console.log(recipe)
 	async function handleSubmit(e) {
 		e.preventDefault()
 		const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/comment`, {

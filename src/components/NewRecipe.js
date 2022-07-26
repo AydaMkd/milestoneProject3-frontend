@@ -19,7 +19,6 @@ function NewRecipe() {
 		description: ''
 	})
 
-	console.log(recipe)
 	async function handleSubmit(e) {
 		e.preventDefault()
 		const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes`, {
@@ -32,7 +31,6 @@ function NewRecipe() {
 			body: JSON.stringify(recipe)
 		})
 		const data = await response.json()
-		console.log(data)
 		navigate('/recipes')
 	}
 

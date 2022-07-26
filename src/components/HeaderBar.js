@@ -42,8 +42,7 @@ function HeaderBar() {
         </>
     );
   }
-  // console.log(currentUser)
-
+  
   return (
 
     <Navbar bg="light" expand="lg">

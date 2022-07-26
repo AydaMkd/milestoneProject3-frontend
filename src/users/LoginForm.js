@@ -7,8 +7,7 @@ function LoginForm() {
     const navigate = useNavigate()
 
     const { setCurrentUser } = useContext(CurrentUser)
-    // console.log(setCurrentUser)
-
+    
     const [credentials, setCredentials] = useState({
         email: '',
         password: ''

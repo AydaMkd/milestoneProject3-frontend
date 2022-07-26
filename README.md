@@ -1,5 +1,5 @@
 # milestoneProject3-frontend
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills we learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
 
@@ -26,7 +26,7 @@ https://recipesharingfrontend.herokuapp.com/
 - [Work In Progress](#WorkInProgress)
 
 ## Project Description
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's mean to put into practice the skills you learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)Â¸ as well as the rest of the course.
+This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills we learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)Â¸ as well as the rest of the course.
 
 ## Team Name
 
@@ -95,8 +95,10 @@ Made by:
   ### Back End  
     - Node w/express
     - MongoDb
-    - Heroku
     - Postman
+    - Mongoose
+    - Heroku
+    
 
 ## Install & Run
  - #### Frontend (https://github.com/AydaMkd/milestoneProject3-frontend.git)
@@ -105,7 +107,8 @@ Made by:
  - #### nodemon
 ## Usage
 
-User should be able to submit their own recipes, keep their favorite recicpes, rate and comment on other users recipes.
+The user should be able to submit their own recipes, keep their favorite recipes, rate and comment on other users recipes. 
+
 ## Sources
 
 #### :star: :star: :star: Special Thanks to Software Developer Mai Vang for walking us through Edit, Delete buttons and our Modal :star: :star: :star:
@@ -142,13 +145,11 @@ User should be able to submit their own recipes, keep their favorite recicpes, r
 :art:
 [ColorPalettes2](https://coolors.co/palette/fff460-fccf3c-fc9d28-ed7c1a-f25b09)
 
-
 <br>
 
 ### What we learned:
-- When working as a team, make sure to work in the latest version of the repository.
-- Connecting the Front-End with Back-End.
-- Some dependencies have different versions so our code deprecated. The code was superseded by the newer one. Code was not inmediately removed because this can cause a regression in the application. 
+- Connecting the frontend and the backend.
+- To check the latest versions of the installed dependencies and be aware of what is deprecated. 
 - Time frame, implementing the features we planned in a short amount of time.
 
 ### Work In Progress

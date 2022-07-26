@@ -10,19 +10,6 @@ function Nutrition() {
 
     async function handleSearch(e) {
         e.preventDefault()
-        // const result = await fetch(
-        //     `http://localhost:5000/api/recipes/value/${query}`, {
-
-        //         headers: {
-        //             'x-auth-token': localStorage.getItem('token'),
-        //             'Content-Type': 'application/json'
-        //         },
-        //     })
-        // const data = await result.json()
-
-        // console.log(data.ingredients)
-        //query= data.ingredients
-        console.log(query)
 
         const response = await fetch(
             `https://api.calorieninjas.com/v1/nutrition?query=` + query, {
@@ -80,8 +67,6 @@ function Nutrition() {
     }
 
     let recipeCalories = totalcalories()
-    console.log(typeof(recipeCalories))
-
     let display = (
         <>
          <h4 className='nutrtion'>{recipeCalories}</h4> 

@@ -15,7 +15,6 @@ function Recipedisplay() {
     // const resData = null
 
     useEffect(() => {
-        console.log('useEffect')
         const fetchData = async () => {
             const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/`, {
 
@@ -32,7 +31,6 @@ function Recipedisplay() {
         }
         fetchData()
     }, [])
-    console.log(recipes)
 
     if (recipes === null) {
         return <h1>Loading</h1>
@@ -57,7 +55,7 @@ function Recipedisplay() {
                                             <div className="col-lg-8 card-body">
                                                 <h4 className="card-title">{recipe.description}</h4>
                                                 <div className="card-text">
-                                                    
+                                                       <div><b>Recipe Owner:</b> {recipe.name}</div>
                                                         <div><b>Cuisine:</b> {recipe.cuisines}</div>
                                                         <div><b>Difficulty</b> {recipe.difficulty}</div>
                                                         <div><b>Ingredients:</b> {recipe.ingredients}</div>

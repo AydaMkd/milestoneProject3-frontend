@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 // import Search from "./Search";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
@@ -6,15 +6,18 @@ import Container from 'react-bootstrap/Container';
 import { Image } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router"
 import Recipedisplay from "./Recipedisplay";
+import { CurrentUser } from "../contexts/CurrentUser";
+
 
 function Recipes() {
 
     const { id } = useParams()
     const [recipes, setRecipes] = useState(null)
+    const { currentUser, setCurrentUser } = useContext(CurrentUser);
+    
     // const resData = null
 
     useEffect(() => {
-        console.log('useEffect')
         const fetchData = async () => {
             const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/recipes/`, {
 
@@ -25,14 +28,13 @@ function Recipes() {
             })
             const resData = await response.json()
             // if data is the same, don't update
-            if (resData != recipes) {
+            if (resData !== recipes) {
                 setRecipes(resData)
             }
         }
         fetchData()
     }, [])
 
-    console.log(recipes)
     const [menus, setMenus] = useState('')
     const [query, setQuery] = useState('');
 
@@ -96,6 +98,7 @@ function Recipes() {
                                                         <h4 className="card-title">{menu.description}</h4>
                                                         <p className="card-text">
                                                             <ul>
+                                                               <li><b>Recipe Owner:</b> {menu.name}</li> 
                                                                 <li><b>Cuisine:</b> {menu.cuisines}</li>
                                                                 <li><b>Difficulty:</b> {menu.difficulty}</li>
                                                                 <li><b>Prep Time:</b> {menu.preptime}</li>
