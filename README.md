@@ -95,7 +95,10 @@ Made by:
   ### Back End  
     - Node w/express
     - MongoDb
+    - Postman
+    - Mongoose
     - Heroku
+    
 
 ## Install & Run
  - #### Frontend (https://github.com/AydaMkd/milestoneProject3-frontend.git)
@@ -104,7 +107,7 @@ Made by:
  - #### nodemon
 ## Usage
 
-User should be able to submit their own recipes, keep their favorite receipts, rate and comment in other user's recipes. 
+The user should be able to submit their own recipes, keep their favorite recipes, rate and comment on other users recipes. 
 
 ## Sources
 
@@ -145,7 +148,7 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 <br>
 
 ### What we learned:
-- Connecting the Front-End with Back-End.
+- Connecting the frontend and the backend.
 - To check the latest versions of the installed dependencies and be aware of what is deprecated. 
 - Time frame, implementing the features we planned in a short amount of time.
 
@@ -154,5 +157,5 @@ User should be able to submit their own recipes, keep their favorite receipts, r
 - Serving Conversion (MyCookbook.io)
 - Add Difficulty Rating
 - Inventory of ingredients in pantry 
-- link to grocery store shopping cart for missing ingredients
+- Link to grocery store shopping cart for missing ingredients
 
