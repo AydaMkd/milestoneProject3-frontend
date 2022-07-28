@@ -34,17 +34,15 @@ function LoginForm() {
             localStorage.setItem('token', data.token)
             navigate('/')
         } else {
-            setErrorMessage(data.message)
+            setErrorMessage(data.errors[0].msg)
         }
     }
 
     return (
+        
         <main>
             <div className="loginimg">
 			<div className="box">
-			
-			
-			
 			</div>
 			</div>
             
@@ -66,6 +64,7 @@ function LoginForm() {
                             type="email"
                             required
                             value={credentials.email}
+                            placeholder=" Please enter your email"
                             onChange={e => setCredentials({ ...credentials, email: e.target.value })}
                             className="form-control"
                             id="email"
@@ -78,6 +77,7 @@ function LoginForm() {
                             type="password"
                             required
                             value={credentials.password}
+                            placeholder=" Please enter your password"
                             onChange={e => setCredentials({ ...credentials, password: e.target.value })}
                             className="form-control"
                             id="password"

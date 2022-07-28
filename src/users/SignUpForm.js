@@ -12,31 +12,48 @@ function SignUpForm() {
 		email: '',
 		password: ''
 	})
+	const [errorMessage, setErrorMessage] = useState(null)
+
 
 	async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`https://recipesharingbackend.herokuapp.com/api/users/`, {
+
+		const response = await fetch(`https://recipesharingbackend.herokuapp.com/api/users/`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(user)
 		})
+		const data = await response.json()
+		
+		
+        if (response.status === 200) {
+            
+            navigate('/login')
+        } else {
+            setErrorMessage(data.errors[0].msg)
+        }
+    }
 
-		navigate(`/`)
-	}
+	
 
 	return (
 		<main>
 			<div className="signupimg">
 			<div className="box">
-			
-			
-			
 			</div>
 			</div>
 			<h1>Sign Up</h1>
+            {errorMessage !== null
+                ? (
+                    <div className="alert alert-danger" role="alert">
+                        {errorMessage}
+                    </div>
+                )
+                : null
+            }
 			
 			<form onSubmit={handleSubmit}>
 				<div className="row">
@@ -45,6 +62,7 @@ function SignUpForm() {
 						<input
 							required
 							value={user.username}
+							placeholder="Please enter a username"
 							onChange={e => setUser({ ...user, username: e.target.value })}
 							className="form-control"
 							id="username"
@@ -59,6 +77,7 @@ function SignUpForm() {
 							type="email"
 							required
 							value={user.email}
+							placeholder="Please enter your email address"
 							onChange={e => setUser({ ...user, email: e.target.value })}
 							className="form-control"
 							id="email"
@@ -71,6 +90,7 @@ function SignUpForm() {
 							type="password"
 							required
 							value={user.password}
+							placeholder="Please enter a password of 6 or more characters"
 							onChange={e => setUser({ ...user, password: e.target.value })}
 							className="form-control"
 							id="password"
