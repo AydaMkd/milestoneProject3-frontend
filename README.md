@@ -1,5 +1,5 @@
 # milestoneProject3-frontend
-This milestone project takes place at the end of the web engineer unit, and concludes the software development program. It's meant to put into practice the skills we learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
+This milestone project takes place at the end of the software engineer unit, and concludes the full stack software development program. It's meant to put into practice the skills we learned in courses 9 (Cybersecurity), 10 (Principles of Programming with Python), and 11 (Advanced Topics)¸ as well as the rest of the course.
 
 ## Deployment
 
