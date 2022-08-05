@@ -22,7 +22,6 @@ https://recipesharingfrontend.herokuapp.com/
 - [Sources](#sources)
 - [Tracking](#Tracking)
 - [Relationships](#Relationships)
-- [Issues](#Issues)
 - [Work In Progress](#WorkInProgress)
 
 ## Project Description
