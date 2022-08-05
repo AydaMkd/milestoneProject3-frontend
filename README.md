@@ -116,10 +116,10 @@ The user should be able to submit their own recipes, keep their favorite recipes
 ### Learned to align images on readme.
 (https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
 
-### guide to add background images.
+### Guide to add background images.
 (https://www.w3schools.com/jsref/prop_style_backgroundimage.asp)
 
-### bootstrap cards documentation.
+### Bootstrap cards documentation.
 (https://www.w3schools.com/bootstrap4/bootstrap_cards.asp)
 
 ## Tracking progress
@@ -140,9 +140,9 @@ The user should be able to submit their own recipes, keep their favorite recipes
 
 [calorieninjas API](https://calorieninjas.com/api)
 
-:art:
+:Art:
 [ColorPalettes1](https://coolors.co/palette/f7b267-f79d65-f4845f-f27059-f25c54)
-:art:
+:Art:
 [ColorPalettes2](https://coolors.co/palette/fff460-fccf3c-fc9d28-ed7c1a-f25b09)
 
 <br>
