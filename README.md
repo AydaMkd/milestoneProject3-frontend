@@ -140,9 +140,9 @@ The user should be able to submit their own recipes, keep their favorite recipes
 
 [calorieninjas API](https://calorieninjas.com/api)
 
-:Art:
+:art:
 [ColorPalettes1](https://coolors.co/palette/f7b267-f79d65-f4845f-f27059-f25c54)
-:Art:
+:art:
 [ColorPalettes2](https://coolors.co/palette/fff460-fccf3c-fc9d28-ed7c1a-f25b09)
 
 <br>
