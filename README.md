@@ -9,20 +9,20 @@ https://recipesharingfrontend.herokuapp.com/
 
 ## Table of Contents
 
-- [Description](#description)
+- [Description](#Description)
 - [Team](#team)
-- [Credits](#credits)
-- [Application](#application)
-- [Api](#api)
-- [App](#app)
-- [Wireframe](#wireframe)
-- [Technology](#technology)
-- [Install & Run](#install)
+- [Credits](#Credits)
+- [Application](#Application)
+- [API](#API)
+- [App](#App)
+- [Wireframe](#Wireframe)
+- [Technology](#Technology)
+- [Install & Run](#Install)
 - [Usage](#usage)
 - [Sources](#sources)
-- [Tracking](#tracking)
-- [relationships](#relationships)
-- [Issues](#issues)
+- [Tracking](#Tracking)
+- [Relationships](#Relationships)
+- [Issues](#Issues)
 - [Work In Progress](#WorkInProgress)
 
 ## Project Description
